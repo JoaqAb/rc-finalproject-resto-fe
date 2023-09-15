@@ -10,10 +10,11 @@ export const AppRouter = () => {
     <>
     <BrowserRouter>
     <Routes>
-        <Route path="/register" element = {<RegisterScreen/>}>
-            <Route path= "/" element = {<HomeScreen/>}/> 
-        </Route>
-          
+
+    <Route path= "/" element = {<HomeScreen/>}/> 
+    <Route path = "/register" element = {<RegisterScreen/>}/>
+  
+      
     </Routes>
     </BrowserRouter>
     </>
