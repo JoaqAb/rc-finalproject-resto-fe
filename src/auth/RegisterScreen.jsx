@@ -6,11 +6,15 @@ export const RegisterScreen = () => {
     const [email, serEmail] = useState ("");
     const [password, serPassword] = useState ("");
     
-    
+ const validarFormulario = (e) => {
+    e.preventDeFault ();
+    console.log("Formulado enviado");
+ }
 
     return (
         <div className="container">
-            <form>
+            
+            <form onSubmit={validarFormulario}>
 
              <Form.Group className="mt-2" controlId="nombre"> 
                 <Form.Label>Nombre</Form.Label>
