@@ -9,7 +9,7 @@ export const RegisterScreen = () => {
  const validarFormulario = (e) => {
     e.preventDeFault ();
     console.log("Formulado enviado");
- }
+ };
 
     return (
         <div className="container">
