@@ -1,0 +1,32 @@
+.content-fq{
+   text-align: center;
+    height: 83vh;
+    background-color: #fffff2;
+}
+.separator{
+    margin: 10px;
+}
+@media (max-width: 1400px){
+    .content-fq{
+        padding-top: 3rem;
+        height: 90vh;
+    }
+    .fq-l{
+        font-size: small;
+    }
+}
+@media (max-width: 490px){
+    .content-fq{
+        padding-top: 1rem;
+        padding-bottom:7rem;
+        height: auto;
+    }
+    .fq-l{
+        font-size: small;
+    }
+}
+@media (max-height:720px){
+    .contact{
+        height: auto;
+    }
+}

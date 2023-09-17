@@ -1,0 +1,19 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.contact{
+    height: 75vh;
+    background-color: #fffff2;
+   
+}
+@media (max-width: 600px){
+    .contact-h1{
+        font-size: 2rem;
+    }
+}
+@media (max-height:720px){
+    .contact{
+        height: auto;
+    }
+}
