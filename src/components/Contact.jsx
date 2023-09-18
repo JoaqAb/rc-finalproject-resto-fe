@@ -1,9 +1,10 @@
-import React, { useRef } from 'react';
+import React, { Fragment, useRef } from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import Contact from './Contact.css';
 import emailjs from '@emailjs/browser';
+import Map from './map';
 
 const validationSchema = Yup.object().shape({
   user_name: Yup.string()
@@ -40,7 +41,7 @@ function Formulario() {
     const lastname = e.target.user_lastname.value;
     const email = e.target.email.value;
     const message = e.target.message.value;
-  
+    
     // Verifica si los campos requeridos están completos
     if (!name || !lastname || !email || !message) {
       // Si algún campo está vacío, no envíes el formulario
@@ -71,7 +72,7 @@ function Formulario() {
 
     <Container className='container-contact'>
       <Row>
-        <Col xs={12} lg={6} className='p-5 mx-auto '>
+        <Col xs={10} lg={6} className=' mx-auto col1-contact'>
           <div className='d-flex align-items-center justify-content-center'>
             <h1 className='contact-h1'>Contactanos</h1>
           </div>
@@ -162,10 +163,19 @@ function Formulario() {
               </Form>
             )}
           </Formik>
+   
+        </Col>
+        <Col xs={10} lg={5} className='mx-auto map-Contact'>
+                <div className='Content-map'>
+                    <Map />
+                          <ul>
+                              <li>General Paz 576, San Miguel de Tucuman, Tucuman, Argentina </li>
+                          </ul>
+                </div>
         </Col>
       </Row>
     </Container>
-            </div>
+          </div>
   );
 }
 

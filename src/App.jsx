@@ -5,12 +5,13 @@ import Navbar from './components/Navbar';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Frequentquestion from './components/Frequentquestion';
+import Error404 from './components/Error404';
 
 function App() {
   return (
     <div>
       <Navbar />
-      <Contact/>
+      <Contact/> 
       <Footer />
     </div>
   )
