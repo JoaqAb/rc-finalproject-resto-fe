@@ -44,3 +44,9 @@ body{
         width: 60%;
     }
 }
+@media (max-height:600px){
+    .container-404{
+        height: auto;
+        padding-bottom: 20px;
+    }
+}

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Navbar, Nav, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './Footer.css'
+import '../css/Footer.css'
 import { FaFacebook, FaInstagram, FaTwitter, FaPhoneAlt, FaRegEnvelope, FaRegPaperPlane } from 'react-icons/fa';
 
 
@@ -13,7 +13,7 @@ const Footer = () => {
               <div className="container">
                   <div className="row">
                       <div className="col-md-4 col-lg-4 col-12 ft-1">
-                          <img className='logo-footer' src="./src/logo.png" alt="" />
+                          <img className='logo-footer' src="./src/logo-footer.jpg" alt="" />
                           <div className="footer-icons pt-3 ">
                           <a href="" className='p-2'><FaFacebook style={{color: "#ffdfd0",}} /></a>
                           <a href="" className='p-2'><FaInstagram style={{color: "#ffdfd0",}} /></a>

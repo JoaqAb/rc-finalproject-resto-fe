@@ -1,4 +1,4 @@
-import './Frequentquestion.css';
+import '../css/Frequentquestion.css';
 import { Row, Col, Accordion, Container} from 'react-bootstrap';
 
 function Frequentquestion() {

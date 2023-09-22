@@ -1,11 +1,12 @@
 import React from 'react';
 import {Container,Nav,Navbar,NavDropdown}from 'react-bootstrap';
+import '../css/navbar.css';
 
 function BasicExample() {
   return (
-    <Navbar expand="lg" variant="dark" style={{backgroundColor: "#ec5853",}}>
+    <Navbar expand="lg" variant="dark" style={{backgroundColor: "#ec5853",}} className='Nav-bar'>
       <Container direction="horizontal" gap={6} className='contact-Nav' >
-        <Navbar.Brand href="#home" style={{color: "#ffdfd0",}}>Restaurante</Navbar.Brand>
+        <Navbar.Brand href="#home"> <img className='logo-Navbar' src="./src/logo-Appetito.png" alt="" /> </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className=" ms-auto">

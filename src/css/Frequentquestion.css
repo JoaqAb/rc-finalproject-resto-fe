@@ -25,8 +25,9 @@
         font-size: small;
     }
 }
-@media (max-height:720px){
-    .contact{
+@media (max-height:600px){
+    .content-fq{
         height: auto;
+        padding-bottom: 20px;
     }
 }
