@@ -1,5 +1,6 @@
 import '../css/Frequentquestion.css';
 import { Row, Col, Accordion, Container} from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 function Frequentquestion() {
   return (
@@ -50,9 +51,15 @@ function Frequentquestion() {
                             <Accordion.Header>politicas de empresa</Accordion.Header>
                                 <Accordion.Body>
                                     <ul className='fq-l'>
-                                        <li><a href="">Terminos y condiciones</a></li>
-                                        <li><a href="">Politicas de privacidad</a></li>
-                                        <li><a href="">Boton de arrepentimiento</a></li>
+                                        <li>
+                                            <Link to="/Error404" className='fq-link'>Terminos y condiciones</Link>
+                                        </li>
+                                        <li>
+                                            <Link to="/Error404" className='fq-link'>Politicas de privacidad</Link>
+                                        </li>
+                                        <li>
+                                            <Link to="/Error404" className='fq-link'>Boton de arrepentimiento</Link>
+                                        </li>
                                     </ul>
                                 </Accordion.Body>
                         </Accordion.Item>

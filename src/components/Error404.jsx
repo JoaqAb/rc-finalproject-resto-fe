@@ -1,5 +1,6 @@
 import React from 'react'
 import error404 from '../css/error404.css';
+import { Link } from 'react-router-dom';
 
 const Error404 = () => {
   return (
@@ -8,10 +9,10 @@ const Error404 = () => {
         <img src="./src/error-404.png" className='img-404'alt=""/>
         <h1>La página que ha solicitado no se encuentra disponible</h1>
         <div className="boton">
-            <button>Volver atras</button>
+        <Link to="/"><button>Volver al inicio</button></Link>
         </div>
     </div>
   )
 }
 
-export default Error404
+export default Error404;

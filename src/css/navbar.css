@@ -1,6 +1,21 @@
-.logo-Navbar{
+.logo-img{
     height: 60px;
     padding: 0px;
     border: solid black 1px;
     border-radius: 50px;
   }
+  .logo-Navbar{
+    display: contents;
+  }
+  .logo-letter{
+    text-decoration: none;
+    color: antiquewhite;
+  }
+  .nav-links{
+    text-decoration: none;
+    color: #fffff2;
+  }
+.nav-letter{
+  text-decoration: none;
+  color: black;
+}

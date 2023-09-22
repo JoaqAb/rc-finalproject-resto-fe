@@ -6,6 +6,12 @@
 .separator{
     margin: 10px;
 }
+.fq-link{
+        color: black;
+}
+.fq-l{
+    text-align: left;
+}
 @media (max-width: 1400px){
     .content-fq{
         padding-top: 3rem;
