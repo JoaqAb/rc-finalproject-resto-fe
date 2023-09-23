@@ -3,13 +3,13 @@ import {Container,Nav,Navbar,NavDropdown}from 'react-bootstrap';
 import '../css/navbar.css';
 import { Link } from 'react-router-dom';
 
-function BasicExample() {
+function NavBar() {
   return (
     <Navbar expand="lg" variant="dark" style={{backgroundColor: "#ec5853",}}>
       <Container direction="horizontal" gap={6} className='contact-Nav' >
         <Navbar.Brand className='logo-Navbar'> 
-                  <Link to="/home"><img className='logo-img' src="./src/logo-Appetito.png" alt="" /></Link>
-                  <Link to="" className='logo-letter'><h5>APPETITO</h5></Link>
+                  <Link to="/home"><img className='logo-img' src="./src/images/Logo-Appetito.png" alt="Logo de appetito" /></Link>
+                  <Link to="/home" className='logo-letter'><h5><strong>APPETITO</strong></h5></Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
@@ -44,4 +44,4 @@ function BasicExample() {
   );
 }
 
-export default BasicExample;
+export default NavBar;

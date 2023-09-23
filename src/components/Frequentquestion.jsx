@@ -8,7 +8,6 @@ function Frequentquestion() {
         <Container className='pt-5'>
         <div>
             <h1>Preguntas Frecuentes</h1>
-        <img src="" alt="" />
         </div>
             <Row className='m-2 '>
                 <Col xs={10} lg={6} className='mx-auto'>

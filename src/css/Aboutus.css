@@ -1,0 +1,127 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.container-aboutus{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 80vh;
+    background-color: #fffff2;
+    padding-top: 1.5rem;
+    max-width: initial;
+}
+.round-image{
+    border-radius: 50%;
+}
+.carousel{
+    width: max-content;
+    padding: 1px;
+    background-color: #2b2b2b;
+    border-radius: 4.5px;
+}
+.tittle-about{
+    display: flex;
+    justify-content: center;
+    font-size: x-large;
+    padding-bottom: 15px;
+}
+
+.carousel-indicators{
+    margin-bottom: -2rem;
+}
+
+.h3-aboutus{
+    font-size: large;
+    color: #fffff2;
+}
+.information-about{
+    background-color: #ec5853;
+    padding: 10px;
+    margin-right: 30px;
+    color: #fffff2;
+}
+[data-bs-theme=dark] .carousel .carousel-control-next-icon, [data-bs-theme=dark] .carousel .carousel-control-prev-icon, [data-bs-theme=dark].carousel .carousel-control-next-icon, [data-bs-theme=dark].carousel .carousel-control-prev-icon{
+    filter: invert(0) grayscale(100);
+}
+@media (max-width: 1000px){
+    .tittle-about{
+        font-size: large;
+        padding-bottom: 7px;
+        margin-bottom:7px;
+    }
+    .h3-aboutus{
+        font-size: medium;
+        margin-top: 20px;
+        margin-bottom: 8px;
+    }
+    .information-about{
+        background-color: #ec5853;
+        margin: 30px;
+        
+    }
+}
+@media (max-width: 700px){
+    .tittle-about{
+        font-size: large;
+        padding-bottom: 4px;
+        margin-bottom:4px;
+    }
+    .h3-aboutus{
+        font-size: medium;
+        margin-top: 10px;
+        margin-bottom: 4px;
+    }
+    .p-aboutus{
+        font-size: small;
+    }
+}
+@media (max-width: 600px){
+    .tittle-about{
+        font-size:x-medium;
+        padding-bottom: 1px;
+        margin-bottom:1px;
+    }
+    .information-about{
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .h3-aboutus{
+        margin-top: 5px;
+        margin-bottom: 2px;
+    }
+}
+@media (max-width: 500px){
+    .tittle-about{
+        font-size:x-medium;
+        margin-bottom:0px;
+    }
+    .information-about{
+        margin-top: 25px;
+        margin-bottom: 40px;
+    }
+    .h3-aboutus{
+        font-size: small;
+    }
+    .p-aboutus{
+        font-size: x-small;
+    }
+    .container-aboutus{
+        padding-top: 40px;
+        min-height: 700px;
+    }
+
+}
+@media (max-height:900px){
+    .container-aboutus{
+        height: auto;
+        padding-bottom: 20px;
+    }
+    .information-about{
+       height: auto;
+       margin-top: 30px;
+       margin-bottom:60px ;
+    }
+}

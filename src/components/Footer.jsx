@@ -15,18 +15,18 @@ const Footer = () => {
               <div className="container">
                   <div className="row">
                       <div className="col-md-4 col-lg-4 col-12 ft-1">
-                      <Link to="/home"><img className='logo-footer' src="./src/logo-footer.jpg" alt="" /></Link>
+                      <a href="/home"><img className='logo-footer' src="/src/images/logo-footer.jpg" alt="" /></a>
                           <div className="footer-icons pt-3 ">
-                          <Link to="https://www.facebook.com/" className='p-2'><FaFacebook style={{color: "#ffdfd0",}} /></Link>
-                          <Link to="https://www.instagram.com/" className='p-2'><FaInstagram style={{color: "#ffdfd0",}} /></Link>
-                          <Link to="https://twitter.com/" className='p-2'><FaTwitter style={{color: "#ffdfd0",}} /></Link>
+                          <a href="https://www.facebook.com/" className='p-2'><FaFacebook style={{color: "#ffdfd0",}} /></a>
+                          <a href="https://www.instagram.com/" className='p-2'><FaInstagram style={{color: "#ffdfd0",}} /></a>
+                          <a href="https://twitter.com/" className='p-2'><FaTwitter style={{color: "#ffdfd0",}} /></a>
                           </div>
                       </div>
                       <div className="col-md-4 col-lg-4 col-12 ft-2 ">
                             <h3 style={{color: "#ffdfd0",}}>Sobre nosotros</h3>
                             <ul>
                                 <li className="nav-item ">
-                                    <Link to="/" style={{color: "#ffdfd0",}}>¿Quienes somos?</Link>
+                                    <Link to="/Aboutus" style={{color: "#ffdfd0",}}>¿Quienes somos?</Link>
                                 </li>
                                 <li className="nav-item">
                                     <Link to="/Frequentquestion" style={{color: "#ffdfd0",}}>Preguntas frecuentes</Link>

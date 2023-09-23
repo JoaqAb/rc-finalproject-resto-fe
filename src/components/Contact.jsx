@@ -162,7 +162,7 @@ function Formulario() {
                 </div>
               </Form>
             )}
-          </Formik>
+            </Formik>
    
         </Col>
         <Col xs={10} lg={5} className='mx-auto map-Contact'>
