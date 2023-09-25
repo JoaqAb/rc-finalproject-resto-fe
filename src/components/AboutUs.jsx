@@ -39,7 +39,7 @@ function Aboutus() {
                          <Card>
                             <Image src='../src/images/joaquin.jpg' wrapped ui={false} />
                             <Card.Content>
-                                <Card.Header>Joaquin</Card.Header>
+                                <Card.Header>Joaquin Abuin</Card.Header>
                                 <Card.Meta>
                                     <span className='date'>APPETITO</span>
                                 </Card.Meta>
@@ -96,7 +96,7 @@ function Aboutus() {
                          <Card className='card'>
                             <Image src='../src/images/joaquin.jpg' wrapped ui={false} />
                             <Card.Content>
-                                <Card.Header>Valentina</Card.Header>
+                                <Card.Header>Valentina muratore</Card.Header>
                                 <Card.Meta>
                                     <span className='date'>APPETITO</span>
                                 </Card.Meta>
