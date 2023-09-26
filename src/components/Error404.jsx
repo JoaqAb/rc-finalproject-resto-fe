@@ -1,17 +1,18 @@
-import React from 'react'
-import error404 from './error404.css';
+import React from "react";
+import error404 from "./error404.css";
 
 const Error404 = () => {
   return (
-    <div className='container-404'>
-       
-        <img src="./src/error-404.png" className='img-404'alt=""/>
-        <h1>La página que ha solicitado no se encuentra disponible</h1>
+    <div className="container-404">
+      <img src="./src/error-404.png" className="img-404" alt="" />
+      <h1>La página que ha solicitado no se encuentra disponible</h1>
+      <a href="/">
         <div className="boton">
-            <button>Volver atras</button>
+          <button>Volver atras</button>
         </div>
+      </a>
     </div>
-  )
-}
+  );
+};
 
-export default Error404
+export default Error404;

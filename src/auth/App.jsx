@@ -3,7 +3,7 @@ import { Form, Button } from "react-bootstrap";
 
 import CuentaScreen from "./CuentaScreen";
 
-function App() {
+function AppAuth() {
   const [usuario, setUsuario] = useState({
     nombre: "Nombre de ejemplo",
     email: "correo@example.com",
@@ -28,4 +28,4 @@ function App() {
   );
 }
 
-export default App;
+export default AppAuth;
