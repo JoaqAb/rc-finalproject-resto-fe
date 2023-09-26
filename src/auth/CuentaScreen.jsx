@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
 import "../Css/Cuenta.css";
 
-// Componente para visualizar los datos del usuario
+
 const DatosUsuario = ({ nombre, email, cantidadPedidos }) => {
   return (
     <div className="datos-usuario">
@@ -16,13 +16,13 @@ const DatosUsuario = ({ nombre, email, cantidadPedidos }) => {
   );
 };
 
-// Componente para editar los datos del usuario
+
 const EditarDatosUsuario = ({ nombre, email, actualizarUsuario }) => {
   const [nuevoNombre, setNuevoNombre] = useState(nombre);
   const [nuevoEmail, setNuevoEmail] = useState(email);
 
   const handleGuardarCambios = () => {
-    // Aquí puedes agregar lógica para guardar los cambios en la base de datos
+ 
     const nuevosDatos = { nombre: nuevoNombre, email: nuevoEmail };
     actualizarUsuario(nuevosDatos);
   };

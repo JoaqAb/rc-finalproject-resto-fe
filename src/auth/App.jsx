@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
 
-import CuentaScreen from "./CuentaScreen"; 
+import CuentaScreen from "./CuentaScreen";
 
 function App() {
   const [usuario, setUsuario] = useState({
@@ -11,13 +11,10 @@ function App() {
   });
 
   const actualizarUsuario = (nuevosDatos) => {
-    // Lógica para actualizar el usuario
     setUsuario({ ...usuario, ...nuevosDatos });
   };
 
-  const cerrarSesion = () => {
-    // Lógica para cerrar sesión
-  };
+  const cerrarSesion = () => {};
 
   return (
     <div className="App">
