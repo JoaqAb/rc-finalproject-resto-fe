@@ -72,10 +72,13 @@
     border-radius: 3px;
     cursor: pointer;
     transition: background-color 0.3s ease; 
+   
   }
   
   .editar-datos-usuario button:hover {
     background-color: #45a049; 
+   
+    padding: 10px;
   }
   
   
