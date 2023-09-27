@@ -25,7 +25,7 @@ function AboutUs() {
                                     <span className='date'>APPETITO</span>
                                 </Card.Meta>
                                 <Card.Description>
-                                    Matthew is a musician living in Nashville.
+                                    Nada mejor que Appetito con amigos!.
                                 </Card.Description>
                             </Card.Content>
                             <Card.Content extra>
@@ -44,7 +44,7 @@ function AboutUs() {
                                     <span className='date'>APPETITO</span>
                                 </Card.Meta>
                                 <Card.Description>
-                                    Matthew is a musician living in Nashville.
+                                    Appetito, un bar en una app.
                                 </Card.Description>
                             </Card.Content>
                             <Card.Content extra>
@@ -63,7 +63,7 @@ function AboutUs() {
                                     <span className='date'>APPETITO</span>
                                 </Card.Meta>
                                 <Card.Description>
-                                    Matthew is a musician living in Nashville.
+                                    Appetito, el mejor bar tecnologico!.
                                 </Card.Description>
                             </Card.Content>
                             <Card.Content extra>
@@ -82,7 +82,7 @@ function AboutUs() {
                                     <span className='date'>APPETITO</span>
                                 </Card.Meta>
                                 <Card.Description>
-                                    Matthew is a musician living in Nashville.
+                                    Nada mejor que Appetito con amigos!.
                                 </Card.Description>
                             </Card.Content>
                             <Card.Content extra>
@@ -101,7 +101,7 @@ function AboutUs() {
                                     <span className='date'>APPETITO</span>
                                 </Card.Meta>
                                 <Card.Description>
-                                    Matthew is a musician living in Nashville.
+                                    Appetito bar.
                                 </Card.Description>
                             </Card.Content>
                             <Card.Content extra >
