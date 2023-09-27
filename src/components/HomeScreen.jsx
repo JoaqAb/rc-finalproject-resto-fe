@@ -8,7 +8,6 @@ export const HomeScreen = () => {
       <Row className='row-home'>
         <Col className= "d-flex justify-content-center text-center align-items-center m-4 p-3">
           <h1>Proximamente...</h1>
-          link
         </Col>
       </Row>
 
