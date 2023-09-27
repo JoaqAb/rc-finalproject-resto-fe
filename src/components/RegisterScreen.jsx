@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Form, Button } from "react-bootstrap";
+import { Form, Button, Row, Col } from "react-bootstrap";
 import "./RegisterScreen.css";
 import { NavLink } from "react-router-dom";
 
@@ -39,14 +39,15 @@ export const RegisterScreen = () => {
   };
 
   return (
-        <div className="bodyregister">
+    <Row className="row-register">
+      <Col xs={8} lg={4} className="col-register">
 
               <div className="container-regisiter">
                 {msjError ? <p className="bg-danger text white p-3">{msjError} </p> : ""}
 
                 <Form onSubmit={validarFormulario}>
                   <Form.Group className="mt-2" controlId="nombre">
-                    <Form.Label>Nombre</Form.Label>
+                    <Form.Label style={{color: "#ffdfd0",}}><strong>Nombre</strong></Form.Label>
                     <Form.Control
                       type="text"
                       placeholder="Ingrese su nombre"
@@ -55,7 +56,7 @@ export const RegisterScreen = () => {
                   </Form.Group>
 
                   <Form.Group className="mt-2" controlId="email">
-                    <Form.Label>Email</Form.Label>
+                    <Form.Label style={{color: "#ffdfd0",}}><strong>Email</strong></Form.Label>
                     <Form.Control
                       type="email"
                       placeholder="Ingrese su Email"
@@ -64,7 +65,7 @@ export const RegisterScreen = () => {
                   </Form.Group>
 
                   <Form.Group className="mt-2" controlId="contraseña">
-                    <Form.Label>Contraseña</Form.Label>
+                    <Form.Label style={{color: "#ffdfd0",}}> <strong>Contraseña</strong></Form.Label>
                     <Form.Control
                       type="password"
                       placeholder="Ingrese su contraseña"
@@ -77,13 +78,14 @@ export const RegisterScreen = () => {
                   </Button>
 
                   <NavLink to="/login">
-                    <Button className="mt-5 w-100 p-2" variant="danger">
+                    <Button className="mt-3 w-100 p-2" variant="danger">
                       Iniciar Sesion
                     </Button>
                   </NavLink>
                 </Form>
               </div>
-          </div>
+      </Col>
+      </Row>
   );
 };
 
