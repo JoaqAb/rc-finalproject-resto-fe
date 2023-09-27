@@ -12,10 +12,15 @@ body {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
   }
+  .Content-map{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   .map-wrap {
     position: relative;
-    width: 80%;
-    height: calc(70vh - 100px);
+    width: 100%;
+    height: calc(70vh - 90px);
   }
   
   .map {
