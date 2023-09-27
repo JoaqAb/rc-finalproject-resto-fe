@@ -13,7 +13,10 @@
 	 padding: 30px;
 	 border-radius: 5px;
  }
-
+ .border-password{
+	border-bottom: 1.5px solid #2b2b2b;
+	color: #2b2b2b;
+ }
  @media (max-width: 560px){
    .col-login{
 	padding: 10px;

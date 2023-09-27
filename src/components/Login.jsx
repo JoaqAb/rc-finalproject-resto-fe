@@ -26,41 +26,42 @@ export const Login = () => {
   return (
     <Row className="row-login">
       <Col xs={8} lg={4} className="col-login" >
-  <div className="container">
-      {msjError ? <p className="bg-danger text-white p-3">{msjError}</p> : ""}
+          <div className="container">
+            {msjError ? <p className="bg-danger text-white p-3">{msjError}</p> : ""}
 
-      <Form onSubmit={validarFormulario}>
-        <Form.Group className="mt-2" controlId="email">
-          <Form.Label style={{color: "#ffdfd0",}}><strong>Email</strong></Form.Label>
-          <Form.Control
-            type="email"
-            placeholder="Enter your Email"
-            onChange={(e) => setEmail(e.target.value)}
-            />
-        </Form.Group>
+          <Form onSubmit={validarFormulario}>
+              <Form.Group className="mt-2" controlId="email" >
+                  <Form.Label style={{color: "#ffdfd0",}}><strong>Email</strong></Form.Label>
+                  <Form.Control
+                    type="email"
+                    placeholder="Enter your Email"
+                    onChange={(e) => setEmail(e.target.value)}
+                    />
+              </Form.Group>
 
-        <Form.Group className="mt-2" controlId="password">
-          <Form.Label style={{color: "#ffdfd0",}}> <strong>Contraseña</strong></Form.Label>
-          <Form.Control
-            type="password"
-            placeholder="Enter your password"
-            onChange={(e) => setPassword(e.target.value)}
-            />
-        </Form.Group>
+              <Form.Group className="mt-2 mb-3" controlId="password">
+                  <Form.Label style={{color: "#ffdfd0",}}> <strong>Contraseña</strong></Form.Label>
+                  <Form.Control
+                    type="password"
+                    placeholder="Enter your password"
+                    onChange={(e) => setPassword(e.target.value)}
+                    />
+              </Form.Group>
 
-        <Button className="mt-5 w-100 p-2" variant="primary" type="submit">
-          Iniciar Sesión
-        </Button>
-        <br />
+              <Button className="mt-4 w-100 p-2" variant="primary" type="submit">
+                  Iniciar Sesión
+              </Button>
+              <br />
 
-        <NavLink to="/register">
-          <Button className="mt-3 w-100 p-2" variant="danger">
-            Register
-          </Button>
-        </NavLink>
-      </Form>
-      <p className="text-center" style={{color: "#ffdfd0",}}> <strong>Si todavia no estas registrado, ingrese aquí</strong></p>
-      </div>
+              <p className="text-center mb-1 mt-3" style={{color: "#ffdfd0",}}> <strong>Si todavia no estas registrado↓↓</strong></p>
+              <NavLink to="/register">
+                  <Button className=" w-100 p-2" variant="danger">
+                    Register
+                  </Button>
+              </NavLink>
+          </Form>
+          <div className="text-center"><a href="/Error404" className="border-password mb-1 mt-3" style={{color: "#2b2b2b",}}> <strong>Olvidaste tu contraseña? hace click aqui</strong></a></div>
+        </div>
     </Col>
     </Row>
   );

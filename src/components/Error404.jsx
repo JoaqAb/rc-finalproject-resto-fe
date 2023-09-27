@@ -1,5 +1,5 @@
 import React from 'react'
-import error404 from './error404.css';
+import  './error404.css';
 import { Link } from 'react-router-dom';
 
 const Error404 = () => {
