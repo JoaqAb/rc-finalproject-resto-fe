@@ -11,7 +11,6 @@ const Error404 = () => {
         <div className="boton">
         <Link to="/"><button>Volver al inicio</button></Link>
         </div>
-      </a>
     </div>
   );
 };
