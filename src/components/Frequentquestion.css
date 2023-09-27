@@ -1,10 +1,16 @@
 .content-fq{
    text-align: center;
-    height: 83vh;
+    height: 80vh;
     background-color: #fffff2;
 }
 .separator{
     margin: 10px;
+}
+.fq-link{
+        color: black;
+}
+.fq-l{
+    text-align: left;
 }
 @media (max-width: 1400px){
     .content-fq{
@@ -25,8 +31,9 @@
         font-size: small;
     }
 }
-@media (max-height:720px){
-    .contact{
+@media (max-height:600px){
+    .content-fq{
         height: auto;
+        padding-bottom: 20px;
     }
 }

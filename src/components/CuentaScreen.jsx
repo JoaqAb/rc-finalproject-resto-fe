@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
-import "../Css/Cuenta.css";
+import "./Cuenta.css";
 
 
 const DatosUsuario = ({ nombre, email, cantidadPedidos }) => {

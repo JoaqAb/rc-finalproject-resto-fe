@@ -1,5 +1,6 @@
 import './Frequentquestion.css';
 import { Row, Col, Accordion, Container} from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 function Frequentquestion() {
   return (
@@ -7,13 +8,12 @@ function Frequentquestion() {
         <Container className='pt-5'>
         <div>
             <h1>Preguntas Frecuentes</h1>
-        <img src="" alt="" />
         </div>
             <Row className='m-2 '>
                 <Col xs={10} lg={6} className='mx-auto'>
                     <Accordion defaultActiveKey="" >
                         <Accordion.Item eventKey="0" className='border border-2' >
-                            <Accordion.Header>¿Qué es ...?</Accordion.Header>
+                            <Accordion.Header>¿Qué es Appetito?</Accordion.Header>
                                 <Accordion.Body> 
                                <p className='fq-l'> Somos un restaurante de comida que conecta a miles de comensales de San Miguel de Tucuman contamos con mas de 3 sucursales con servicio en el local o envio a domicilio. Ofrecemos una carta virtual que te permitira, elegir lo que queres comer de una manera rapida, segura y practica.</p>
                                 </Accordion.Body>
@@ -50,9 +50,15 @@ function Frequentquestion() {
                             <Accordion.Header>politicas de empresa</Accordion.Header>
                                 <Accordion.Body>
                                     <ul className='fq-l'>
-                                        <li><a href="">Terminos y condiciones</a></li>
-                                        <li><a href="">Politicas de privacidad</a></li>
-                                        <li><a href="">Boton de arrepentimiento</a></li>
+                                        <li>
+                                            <Link to="/Error404" className='fq-link'>Terminos y condiciones</Link>
+                                        </li>
+                                        <li>
+                                            <Link to="/Error404" className='fq-link'>Politicas de privacidad</Link>
+                                        </li>
+                                        <li>
+                                            <Link to="/Error404" className='fq-link'>Boton de arrepentimiento</Link>
+                                        </li>
                                     </ul>
                                 </Accordion.Body>
                         </Accordion.Item>
