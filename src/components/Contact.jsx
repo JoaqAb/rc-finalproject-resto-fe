@@ -2,7 +2,7 @@ import React, { Fragment, useRef } from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import Contact from '../css/contact.css';
+import './contact.css';
 import emailjs from '@emailjs/browser';
 import Map from './map';
 

@@ -1,6 +1,6 @@
 import {Container, Row, Col, Carousel} from 'react-bootstrap';
 import { Card, Icon, Image } from 'semantic-ui-react'
-import '../css/Aboutus.css';
+import './Aboutus.css';
 
 function Aboutus() {
   return (

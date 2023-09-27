@@ -1,4 +1,4 @@
-import '../css/Frequentquestion.css';
+import './Frequentquestion.css';
 import { Row, Col, Accordion, Container} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 

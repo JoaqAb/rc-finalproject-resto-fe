@@ -1,6 +1,6 @@
 import React from 'react';
 import {Container,Nav,Navbar,NavDropdown}from 'react-bootstrap';
-import '../css/navbar.css';
+import './navbar.css';
 import { Link } from 'react-router-dom';
 
 function NavBar() {
@@ -15,16 +15,16 @@ function NavBar() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className=" ms-auto">
               <Nav.Link >
-                  <Link to="/" className='nav-links'>Inicio</Link>
+                  <Link to="/home" className='nav-links'>Inicio</Link>
               </Nav.Link>
               <Nav.Link >
-                  <Link to="/" className='nav-links'>Pedidos</Link>
+                  <Link to="/create" className='nav-links'>Pedido</Link>
               </Nav.Link>
               <Nav.Link>
-                  <Link to="/" className='nav-links'>Menu</Link>
+                  <Link to="/menu" className='nav-links'>Menu</Link>
               </Nav.Link>
               <Nav.Link >
-                  <Link to="/" className='nav-links'>Carrito</Link>
+                  <Link to="/cart" className='nav-links'>Carrito</Link>
               </Nav.Link>
             <NavDropdown title="Tu cuenta" id="basic-nav-dropdown" >
                   <NavDropdown.Item > 
@@ -34,7 +34,7 @@ function NavBar() {
                       <Link to="/register" className='nav-letter'>Registrarse</Link>
                   </NavDropdown.Item>
                   <NavDropdown.Item >
-                      <Link to="/Error404" className='nav-letter'>Cambiar mis datos</Link> 
+                      <Link to="/update" className='nav-letter'>Cambiar mis datos</Link> 
                   </NavDropdown.Item>
             </NavDropdown>
           </Nav>
