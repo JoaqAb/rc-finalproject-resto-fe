@@ -1,12 +1,17 @@
-body{
-	
-	background-color: #aca89471;
-	background-size: cover;
-    color:  #ec5853;
-    text-align: center;
-	width: 100%;
- 
 
+.row-register{
+	margin: 0px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #Fffff2;
+	height: 80vh;
+	
+}
+.col-register{
+	background-color:  #ec5853;
+	padding: 30px;
+	border-radius: 5px;
 }
  
 .form {
@@ -21,7 +26,7 @@ body{
 }
 
 .button {
-	border-radius: 20px;
+	border-radius: 10px;
 	border: 1px solid #F2eee3;
 	background-color: #F2eee3;
 	color: black;
@@ -31,3 +36,8 @@ body{
 	letter-spacing: 1px;
 	border-color: red;
 }
+@media (max-width: 560px){
+	.col-register{
+	 padding: 10px;
+	}
+ }

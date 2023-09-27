@@ -1,8 +1,10 @@
 import React from 'react';
 import { Container, Row, Col, Navbar, Nav, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './Footer.css'
+import './footer.css'
 import { FaFacebook, FaInstagram, FaTwitter, FaPhoneAlt, FaRegEnvelope, FaRegPaperPlane } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+
 
 
 
@@ -12,33 +14,33 @@ const Footer = () => {
           <div className='Footer'>
               <div className="container">
                   <div className="row">
-                      <div className="col-md-4 col-lg-4 col-12 ft-1">
-                          <img className='logo-footer' src="./src/logo.png" alt="" />
+                      <div className="col-md-4 col-lg-4 col-12 ft-1 logo-icons">
+                      <a href="/home"><img className='logo-footer ' src="/src/images/logo-footer.jpg" alt="" /></a>
                           <div className="footer-icons pt-3 ">
-                          <a href="" className='p-2'><FaFacebook style={{color: "#ffdfd0",}} /></a>
-                          <a href="" className='p-2'><FaInstagram style={{color: "#ffdfd0",}} /></a>
-                          <a href="" className='p-2'><FaTwitter style={{color: "#ffdfd0",}} /></a>  
+                          <a href="/Error404" className='m-2'><FaFacebook  className='link-nav'/></a>
+                          <a href="/Error404" className='m-2'><FaInstagram  className='link-nav'/></a>
+                          <a href="/Error404" className='m-2'><FaTwitter  className='link-nav'/></a>
                           </div>
                       </div>
-                      <div className="col-md-4 col-lg-4 col-12 ft-2 ">
+                      <div className="col-md-4 col-lg-4 col-12 ft-2 links-footer">
                             <h3 style={{color: "#ffdfd0",}}>Sobre nosotros</h3>
-                            <ul>
+                            <ul >
                                 <li className="nav-item ">
-                                    <a className="" href="/" style={{color: "#ffdfd0",}}>¿Quienes somos?</a>
+                                    <Link to="/Aboutus" className='link-nav m-5'>¿Quienes somos?</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="" href="/" style={{color: "#ffdfd0",}}>Preguntas frecuentes</a>
+                                    <Link to="/Frequentquestion" className='link-nav m-3'>Preguntas frecuentes</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="" href="/" style={{color: "#ffdfd0",}}>Envianos tu opinion</a>
+                                    <Link to="/Contact" className='link-nav m-5' >Envianos tu opinion</Link>
                                 </li>
                             </ul>
                         </div>
                       <div className="col-md-4 col-lg-4 col-12 ft-3">
                           <h3 style={{color: "#ffdfd0",}} >Contacto</h3>
-                          <p style={{color: "#ffdfd0",}}><FaPhoneAlt />  381-3040031</p>
+                          <p style={{color: "#ffdfd0",}}><FaPhoneAlt /><a href="https://wa.me/543813040031 "  style={{color: "#ffdfd0",}}>381-3040031</a></p>
                           <p style={{color: "#ffdfd0",}}><FaRegEnvelope />  RestauranteRolling1@gmail.com</p>
-                          <p style={{color: "#ffdfd0",}}><FaRegPaperPlane />  San Miguel de Tucuman, Argentina</p>
+                          <p style={{color: "#ffdfd0",}}><FaRegPaperPlane /> General Paz 576, San Miguel de Tucuman, Argentina</p>
                       </div>
                   </div>
               </div>
