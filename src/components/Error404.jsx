@@ -6,7 +6,7 @@ const Error404 = () => {
   return (
     <div className="container-404">
       <img
-        src="https://ibb.co/ngjtMQ2"
+        src="./images/error-404.png"
         className="img-404"
         alt="imagen 404"
       />
