@@ -17,8 +17,8 @@ const Footer = () => {
                       <div className="col-md-4 col-lg-4 col-12 ft-1 logo-icons">
                       <Link to="/Error404"><img className='logo-footer ' src="/src/images/logo-footer.jpg" alt="" /></Link>
                           <div className="footer-icons pt-3 ">
-                          <a href="/Error404" className='m-2'><FaFacebook  className='link-nav'/></a>
-                          <a href="/Error404" className='m-2'><FaInstagram  className='link-nav'/></a>
+                          <Link to="/Error404" className='m-2'><FaFacebook  className='link-nav'/></Link>
+                          <Link to="/Error404" className='m-2'><FaInstagram  className='link-nav'/></Link>
                           <a href="/Error404" className='m-2'><FaTwitter  className='link-nav'/></a>
                           </div>
                       </div>
