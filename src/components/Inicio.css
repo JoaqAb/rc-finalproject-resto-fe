@@ -1,0 +1,17 @@
+/* HomePage.css */
+.homepage {
+    background-image: url('Logo1.jpeg');
+    background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 65vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #d40303; /* Color de texto */
+  /* Agrega una superposición semi-transparente */
+  background-color: rgba(0, 0, 0, 0.3); /* Ajusta el último valor para controlar la opacidad */
+}
+  
