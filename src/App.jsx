@@ -5,7 +5,7 @@
   import { BrowserRouter, Route, Routes } from 'react-router-dom';
   import NavBar from './components/Navbar';
   import Footer from './components/Footer';
-  import Aboutus from './components/Aboutus';
+  import AboutUs from './components/AboutUs';
   import AppAuth from "./components/App";
   import Formulario  from './components/Contact';
   import CuentaScreen from "./components/CuentaScreen";
@@ -19,11 +19,11 @@
   function App() {
     return (  
       
-      <div>
+      <>
         <BrowserRouter>
           <NavBar/>
             <Routes>
-                <Route path= "/Aboutus" element = {<Aboutus/>}/> 
+                <Route path= "/Aboutus" element = {<AboutUs/>}/> 
                 <Route path="/App" element={<AppAuth />} />
                 <Route path= "/Contact" element = {<Formulario/>}/> 
                 <Route path="/account" element={<CuentaScreen/> }/>
@@ -35,7 +35,7 @@
             </Routes>
           <Footer/>
         </BrowserRouter>
-      </div>
+      </>
     )
   }
 

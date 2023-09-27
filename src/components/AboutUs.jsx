@@ -2,7 +2,7 @@ import {Container, Row, Col, Carousel} from 'react-bootstrap';
 import { Card, Icon, Image } from 'semantic-ui-react'
 import './Aboutus.css';
 
-function Aboutus() {
+function AboutUs() {
   return (
     <Container className='container-aboutus'>
                 
@@ -134,4 +134,4 @@ function Aboutus() {
   );
 }
 
-export default Aboutus;
+export default AboutUs;
