@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './Footer.css'
 import { FaFacebook, FaInstagram, FaTwitter, FaPhoneAlt, FaRegEnvelope, FaRegPaperPlane } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-
+import imgfooterlogo from '../images/logo-footer.jpg';
 
 
 const Footer = () => {
@@ -14,7 +14,7 @@ const Footer = () => {
               <div className="container">
                   <div className="row">
                       <div className="col-md-4 col-lg-4 col-12 ft-1 logo-icons">
-                      <Link to="/"><img className='logo-footer ' src="../images/logo-footer.jpg" alt="logo de la pagina" /></Link>
+                      <Link to="/"><img className='logo-footer ' src={imgfooterlogo} alt="logo de la pagina" /></Link>
                           <div className="footer-icons pt-3 ">
                           <Link to="/Error404" className='m-2'><FaFacebook  className='link-nav'/></Link>
                           <Link to="/Error404" className='m-2'><FaInstagram  className='link-nav'/></Link>
