@@ -13,7 +13,7 @@ function Frequentquestion() {
                 <Col xs={10} lg={6} className='mx-auto'>
                     <Accordion defaultActiveKey="" >
                         <Accordion.Item eventKey="0" className='border border-2' >
-                            <Accordion.Header>¿Qué es ...?</Accordion.Header>
+                            <Accordion.Header>¿Qué es Appetito?</Accordion.Header>
                                 <Accordion.Body> 
                                <p className='fq-l'> Somos un restaurante de comida que conecta a miles de comensales de San Miguel de Tucuman contamos con mas de 3 sucursales con servicio en el local o envio a domicilio. Ofrecemos una carta virtual que te permitira, elegir lo que queres comer de una manera rapida, segura y practica.</p>
                                 </Accordion.Body>
