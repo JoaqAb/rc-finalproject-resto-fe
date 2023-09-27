@@ -6,14 +6,14 @@
   import NavBar from './components/Navbar';
   import Footer from './components/Footer';
   import Aboutus from './components/Aboutus';
-  import App from "../components/App";
+  import AppAuth from "./components/App";
   import Formulario  from './components/Contact';
-  import CuentaScreen from "../components/CuentaScreen";
+  import CuentaScreen from "./components/CuentaScreen";
   import Error404 from './components/Error404';
   import Frequentquestion from './components/Frequentquestion';
-  import HomeScreen from "../components/HomeScreen";
-  import { Login } from "../components/Login";
-  import { RegisterScreen } from "../components/RegisterScreen";
+  import HomeScreen from "./components/HomeScreen";
+  import { Login } from "./components/Login";
+  import { RegisterScreen } from "./components/RegisterScreen";
 
 
   function App() {
@@ -24,9 +24,9 @@
           <NavBar/>
             <Routes>
                 <Route path= "/Aboutus" element = {<Aboutus/>}/> 
-                <Route path="/App" element={<App />} />
+                <Route path="/App" element={<AppAuth />} />
                 <Route path= "/Contact" element = {<Formulario/>}/> 
-                <Route path="/cuenta" element={<CuentaScreen/> }/>
+                <Route path="/account" element={<CuentaScreen/> }/>
                 <Route path= "/Error404" element = {<Error404/>}/> 
                 <Route path= "/Frequentquestion" element = {<Frequentquestion/>}/> 
                 <Route path="/" element={<HomeScreen />} />

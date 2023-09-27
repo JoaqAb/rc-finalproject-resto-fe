@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
-import "../Css/Login.css";
+import "./Login.css";
 import { NavLink } from "react-router-dom";
 
 export const Login = () => {
@@ -24,6 +24,8 @@ export const Login = () => {
   };
 
   return (
+    <div className="bodyLogin">
+
     <div className="container">
       {msjError ? <p className="bg-danger text-white p-3">{msjError}</p> : ""}
 
@@ -34,7 +36,7 @@ export const Login = () => {
             type="email"
             placeholder="Enter your Email"
             onChange={(e) => setEmail(e.target.value)}
-          />
+            />
         </Form.Group>
 
         <Form.Group className="mt-2" controlId="password">
@@ -43,7 +45,7 @@ export const Login = () => {
             type="password"
             placeholder="Enter your password"
             onChange={(e) => setPassword(e.target.value)}
-          />
+            />
         </Form.Group>
 
         <Button className="mt-5 w-100 p-2" variant="primary" type="submit">
@@ -58,6 +60,7 @@ export const Login = () => {
         </NavLink>
       </Form>
       <p>Si todavia no estas registrado, ingrese aquí</p>
+    </div>
     </div>
   );
 };

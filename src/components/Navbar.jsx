@@ -34,7 +34,7 @@ function NavBar() {
                       <Link to="/register" className='nav-letter'>Registrarse</Link>
                   </NavDropdown.Item>
                   <NavDropdown.Item >
-                      <Link to="/update" className='nav-letter'>Cambiar mis datos</Link> 
+                      <Link to="/account" className='nav-letter'>Cambiar mis datos</Link> 
                   </NavDropdown.Item>
             </NavDropdown>
           </Nav>

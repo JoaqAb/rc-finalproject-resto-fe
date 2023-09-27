@@ -1,5 +1,9 @@
-bodyLogin{
-	
+.bodyLogin{
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+	height: 80vh;
 	background-color: #8a2e2e;
 	background-size: cover;
 }
