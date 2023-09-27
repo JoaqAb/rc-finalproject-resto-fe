@@ -14,31 +14,31 @@ const Footer = () => {
           <div className='Footer'>
               <div className="container">
                   <div className="row">
-                      <div className="col-md-4 col-lg-4 col-12 ft-1">
+                      <div className="col-md-4 col-lg-4 col-12 ft-1 logo-icons">
                       <a href="/home"><img className='logo-footer ' src="/src/images/logo-footer.jpg" alt="" /></a>
                           <div className="footer-icons pt-3 ">
-                          <a href="/Error404" className='p-2'><FaFacebook style={{color: "#ffdfd0",}} /></a>
-                          <a href="/Error404" className='p-2'><FaInstagram style={{color: "#ffdfd0",}} /></a>
-                          <a href="/Error404" className='p-2'><FaTwitter style={{color: "#ffdfd0",}} /></a>
+                          <a href="/Error404" className='p-2'><FaFacebook  className='link-nav'/></a>
+                          <a href="/Error404" className='p-2'><FaInstagram  className='link-nav'/></a>
+                          <a href="/Error404" className='p-2'><FaTwitter  className='link-nav'/></a>
                           </div>
                       </div>
-                      <div className="col-md-4 col-lg-4 col-12 ft-2 ">
+                      <div className="col-md-4 col-lg-4 col-12 ft-2 links-footer">
                             <h3 style={{color: "#ffdfd0",}}>Sobre nosotros</h3>
-                            <ul>
+                            <ul >
                                 <li className="nav-item ">
-                                    <Link to="/Aboutus" style={{color: "#ffdfd0",}}>¿Quienes somos?</Link>
+                                    <Link to="/Aboutus" className='link-nav'>¿Quienes somos?</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link to="/Frequentquestion" style={{color: "#ffdfd0",}}>Preguntas frecuentes</Link>
+                                    <Link to="/Frequentquestion" className='link-nav'>Preguntas frecuentes</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link to="/Contact" style={{color: "#ffdfd0",}}>Envianos tu opinion</Link>
+                                    <Link to="/Contact" className='link-nav' >Envianos tu opinion</Link>
                                 </li>
                             </ul>
                         </div>
                       <div className="col-md-4 col-lg-4 col-12 ft-3">
                           <h3 style={{color: "#ffdfd0",}} >Contacto</h3>
-                          <p style={{color: "#ffdfd0",}}><FaPhoneAlt /><a href="https://wa.me/543813040031" style={{color: "#ffdfd0",}}>381-3040031</a></p>
+                          <p style={{color: "#ffdfd0",}}><FaPhoneAlt /><a href="https://wa.me/543813040031 "  style={{color: "#ffdfd0",}}>381-3040031</a></p>
                           <p style={{color: "#ffdfd0",}}><FaRegEnvelope />  RestauranteRolling1@gmail.com</p>
                           <p style={{color: "#ffdfd0",}}><FaRegPaperPlane /> General Paz 576, San Miguel de Tucuman, Argentina</p>
                       </div>

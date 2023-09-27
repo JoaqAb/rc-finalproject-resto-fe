@@ -3,52 +3,27 @@
   text-align: center;
   background-color: #ec5853;
 }
-
-.ft-1 h3 {
-  font-weight: 600;
-  font-family: cursive;
-  letter-spacing: 2px;
-  padding: 0.5rem 0;
-}
 .logo-footer{
   height: 80px;
   border: solid black 1px;
   border-radius: 50px;
 }
-
-
-.footer-icons a i{
-  padding: 0.4rem 0.5rem;
-  background: #ec5853;
-  color: white;
-  margin: 0 0.5rem;
-  border-radius: 50%;
+.links-footer h3{
+  border-bottom: white;
 }
-
-.footer-icons a i:hover {
-  background: white;
-  color: #ec5853;
-  transition: 0.6s;
-  cursor: pointer;
-}
-
-.Footer h5 {
-  color: #f60838;
-}
-
-.ft-2 ul {
+.links-footer ul {
   list-style: none;
   padding-left: 0;
 }
 
-.ft-2 ul li {
+.links-footer ul li {
   padding: 0.35rem 0;
   font-weight: 500;
 }
 
-.ft-2 ul a {
+.links-footer ul a {
   text-decoration: none;
-  color: #000;
+  color: #ffdfd0;
   font-size: 1.06rem;
 }
 
@@ -60,11 +35,16 @@
 
 .Last-footer p {
   margin-bottom: 0;
-  color: #fffff2;
+  color: #ffdfd0;
   font-size: 1rem;
   font-weight: 600;
 }
-
+.link-nav{
+  color: #ffdfd0; 
+}
+.link-nav:hover{
+  color: #2b2b2b;  
+}
 .wp{
   text-decoration: none;
 }
