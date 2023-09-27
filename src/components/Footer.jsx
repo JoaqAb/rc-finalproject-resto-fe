@@ -17,22 +17,22 @@ const Footer = () => {
                       <div className="col-md-4 col-lg-4 col-12 ft-1 logo-icons">
                       <a href="/home"><img className='logo-footer ' src="/src/images/logo-footer.jpg" alt="" /></a>
                           <div className="footer-icons pt-3 ">
-                          <a href="/Error404" className='p-2'><FaFacebook  className='link-nav'/></a>
-                          <a href="/Error404" className='p-2'><FaInstagram  className='link-nav'/></a>
-                          <a href="/Error404" className='p-2'><FaTwitter  className='link-nav'/></a>
+                          <a href="/Error404" className='m-2'><FaFacebook  className='link-nav'/></a>
+                          <a href="/Error404" className='m-2'><FaInstagram  className='link-nav'/></a>
+                          <a href="/Error404" className='m-2'><FaTwitter  className='link-nav'/></a>
                           </div>
                       </div>
                       <div className="col-md-4 col-lg-4 col-12 ft-2 links-footer">
                             <h3 style={{color: "#ffdfd0",}}>Sobre nosotros</h3>
                             <ul >
                                 <li className="nav-item ">
-                                    <Link to="/Aboutus" className='link-nav'>¿Quienes somos?</Link>
+                                    <Link to="/Aboutus" className='link-nav m-5'>¿Quienes somos?</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link to="/Frequentquestion" className='link-nav'>Preguntas frecuentes</Link>
+                                    <Link to="/Frequentquestion" className='link-nav m-3'>Preguntas frecuentes</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link to="/Contact" className='link-nav' >Envianos tu opinion</Link>
+                                    <Link to="/Contact" className='link-nav m-5' >Envianos tu opinion</Link>
                                 </li>
                             </ul>
                         </div>
