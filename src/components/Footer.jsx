@@ -15,7 +15,7 @@ const Footer = () => {
               <div className="container">
                   <div className="row">
                       <div className="col-md-4 col-lg-4 col-12 ft-1 logo-icons">
-                      <a href="/home"><img className='logo-footer ' src="/src/images/logo-footer.jpg" alt="" /></a>
+                      <Link to="/Error404"><img className='logo-footer ' src="/src/images/logo-footer.jpg" alt="" /></Link>
                           <div className="footer-icons pt-3 ">
                           <a href="/Error404" className='m-2'><FaFacebook  className='link-nav'/></a>
                           <a href="/Error404" className='m-2'><FaInstagram  className='link-nav'/></a>
@@ -36,11 +36,11 @@ const Footer = () => {
                                 </li>
                             </ul>
                         </div>
-                      <div className="col-md-4 col-lg-4 col-12 ft-3">
-                          <h3 style={{color: "#ffdfd0",}} >Contacto</h3>
-                          <p style={{color: "#ffdfd0",}}><FaPhoneAlt /><a href="https://wa.me/543813040031 "  style={{color: "#ffdfd0",}}>381-3040031</a></p>
-                          <p style={{color: "#ffdfd0",}}><FaRegEnvelope />  RestauranteRolling1@gmail.com</p>
-                          <p style={{color: "#ffdfd0",}}><FaRegPaperPlane /> General Paz 576, San Miguel de Tucuman, Argentina</p>
+                      <div className="col-md-4 col-lg-4 col-12 ft-3" style={{color: "#ffdfd0",}}>
+                          <h3>Contacto</h3>
+                          <p><FaPhoneAlt /><a href="https://wa.me/543813040031 "  style={{color: "#ffdfd0",}}>381-3040031</a></p>
+                          <p><FaRegEnvelope />  RestauranteRolling1@gmail.com</p>
+                          <p><FaRegPaperPlane /> General Paz 576, San Miguel de Tucuman, Argentina</p>
                       </div>
                   </div>
               </div>
