@@ -1,10 +1,20 @@
-.bodyLogin{
+
+.row-login{
 	display: flex;
 	justify-content: center;
-	text-align: center;
 	align-items: center;
+	background-color: #fffff2;
 	height: 80vh;
-	background-color: #8a2e2e;
-	background-size: cover;
 }
- 
+.col-login{
+	 background-color: #ec5853;
+	 background-size: cover;
+	 padding: 30px;
+	 border-radius: 5px;
+ }
+
+ @media (max-width: 560px){
+   .col-login{
+	padding: 10px;
+   }
+}

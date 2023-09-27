@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Form, Button } from "react-bootstrap";
+import { Form, Button, Row, Col } from "react-bootstrap";
 import "./Login.css";
 import { NavLink } from "react-router-dom";
 
@@ -24,14 +24,14 @@ export const Login = () => {
   };
 
   return (
-    <div className="bodyLogin">
-
-    <div className="container">
+    <Row className="row-login">
+      <Col xs={8} lg={4} className="col-login" >
+  <div className="container">
       {msjError ? <p className="bg-danger text-white p-3">{msjError}</p> : ""}
 
       <Form onSubmit={validarFormulario}>
         <Form.Group className="mt-2" controlId="email">
-          <Form.Label>Email</Form.Label>
+          <Form.Label style={{color: "#ffdfd0",}}><strong>Email</strong></Form.Label>
           <Form.Control
             type="email"
             placeholder="Enter your Email"
@@ -40,7 +40,7 @@ export const Login = () => {
         </Form.Group>
 
         <Form.Group className="mt-2" controlId="password">
-          <Form.Label>Contraseña</Form.Label>
+          <Form.Label style={{color: "#ffdfd0",}}> <strong>Contraseña</strong></Form.Label>
           <Form.Control
             type="password"
             placeholder="Enter your password"
@@ -59,9 +59,10 @@ export const Login = () => {
           </Button>
         </NavLink>
       </Form>
-      <p>Si todavia no estas registrado, ingrese aquí</p>
-    </div>
-    </div>
+      <p className="text-center" style={{color: "#ffdfd0",}}> <strong>Si todavia no estas registrado, ingrese aquí</strong></p>
+      </div>
+    </Col>
+    </Row>
   );
 };
 
