@@ -29,7 +29,7 @@
                 <Route path="/account" element={<CuentaScreen/> }/>
                 <Route path= "/Error404" element = {<Error404/>}/> 
                 <Route path= "/Frequentquestion" element = {<Frequentquestion/>}/> 
-                <Route path="/" element={<HomeScreen />} />
+                <Route path="/home" element={<HomeScreen />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<RegisterScreen />} />
             </Routes>
