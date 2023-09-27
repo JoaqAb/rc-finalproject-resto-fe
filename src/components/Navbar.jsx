@@ -2,13 +2,14 @@ import React from 'react';
 import {Container,Nav,Navbar,NavDropdown}from 'react-bootstrap';
 import './navbar.css';
 import { Link } from 'react-router-dom';
+import imgnavlogo from '../images/logo-appetito.png';
 
 function NavBar() {
   return (
     <Navbar expand="lg" variant="dark" style={{backgroundColor: "#ec5853",}}>
       <Container direction="horizontal" gap={6} className='contact-Nav' >
         <Navbar.Brand className='logo-Navbar'> 
-                  <Link to="/"><img className='logo-img' src="./src/images/Logo-Appetito.png" alt="Logo de appetito" /></Link>
+                  <Link to="/"><img className='logo-img' src={imgnavlogo} alt="Logo de appetito" /></Link>
                   <Link to="/" className='logo-letter'><h5><strong>APPETITO</strong></h5></Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

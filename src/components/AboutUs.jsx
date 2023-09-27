@@ -1,6 +1,11 @@
 import {Container, Row, Col, Carousel} from 'react-bootstrap';
 import { Card, Icon, Image } from 'semantic-ui-react'
 import './Aboutus.css';
+import imglucas from '../images/lucas-albarado.png';
+import imgjoaquin from '../images/joaquin.jpg';
+import imgfederico from '../images/federico-khouri.png';
+import imgluca from '../images/luca-campisi.png';
+import imgvalentina from '../images/logo-appetito.png';
 
 function AboutUs() {
   return (
@@ -18,7 +23,7 @@ function AboutUs() {
                 <Carousel  className='carousel' data-bs-theme="dark">
                 <Carousel.Item>
                          <Card >
-                         <Image src='../src/images/Lucas-Albarado.png' className='round-image' wrapped ui={false} />
+                         <Image src={imglucas} className='round-image' wrapped ui={false} />
                             <Card.Content>
                                 <Card.Header>Lucas Albarado</Card.Header>
                                 <Card.Meta>
@@ -37,7 +42,7 @@ function AboutUs() {
                 </Carousel.Item>
                 <Carousel.Item>
                          <Card>
-                            <Image src='../src/images/joaquin.jpg' wrapped ui={false} />
+                            <Image src={imgjoaquin} wrapped ui={false} />
                             <Card.Content>
                                 <Card.Header>Joaquin Abuin</Card.Header>
                                 <Card.Meta>
@@ -56,7 +61,7 @@ function AboutUs() {
                 </Carousel.Item>
                 <Carousel.Item>
                          <Card>
-                            <Image src='../src/images/Federico-khouri.png' wrapped ui={false} />
+                            <Image src={imgfederico} wrapped ui={false} />
                             <Card.Content>
                                 <Card.Header>Federico Khouri</Card.Header>
                                 <Card.Meta>
@@ -75,7 +80,7 @@ function AboutUs() {
                 </Carousel.Item>
                 <Carousel.Item>
                          <Card>
-                            <Image src='../src/images/Lucas-Campisi.png' wrapped ui={false} />
+                            <Image src={imgluca} wrapped ui={false} />
                             <Card.Content>
                                 <Card.Header>Lucas Campisi</Card.Header>
                                 <Card.Meta>
@@ -94,7 +99,7 @@ function AboutUs() {
                 </Carousel.Item>
                 <Carousel.Item >
                          <Card className='card'>
-                            <Image src='../src/images/joaquin.jpg' wrapped ui={false} />
+                            <Image src={imgvalentina} wrapped ui={false} />
                             <Card.Content>
                                 <Card.Header>Valentina muratore</Card.Header>
                                 <Card.Meta>

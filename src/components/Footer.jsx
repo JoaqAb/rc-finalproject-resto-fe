@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './Footer.css'
 import { FaFacebook, FaInstagram, FaTwitter, FaPhoneAlt, FaRegEnvelope, FaRegPaperPlane } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-import imgfooterlogo from '/images/logo-footer.jpg';
+import imgfooterlogo from '../images/logo-footer.jpg';
 
 const Footer = () => {
   return (

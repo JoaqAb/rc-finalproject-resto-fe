@@ -1,12 +1,13 @@
 import React from "react";
 import "./error404.css";
 import { Link } from "react-router-dom";
+import imgerror from '../images/error-404.png';
 
 const Error404 = () => {
   return (
     <div className="container-404">
       <img
-        src="./images/error-404.png"
+        src={imgerror}
         className="img-404"
         alt="imagen 404"
       />
