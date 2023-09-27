@@ -19,7 +19,7 @@ const Footer = () => {
                           <div className="footer-icons pt-3 ">
                           <Link to="/Error404" className='m-2'><FaFacebook  className='link-nav'/></Link>
                           <Link to="/Error404" className='m-2'><FaInstagram  className='link-nav'/></Link>
-                          <a href="/Error404" className='m-2'><FaTwitter  className='link-nav'/></a>
+                          <Link href="/Error404" className='m-2'><FaTwitter  className='link-nav'/></Link>
                           </div>
                       </div>
                       <div className="col-md-4 col-lg-4 col-12 ft-2 links-footer">
