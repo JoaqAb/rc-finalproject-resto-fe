@@ -3,7 +3,6 @@
   import 'bootstrap/dist/css/bootstrap.min.css';
   import { BrowserRouter, Route, Routes } from 'react-router-dom';
   import 'semantic-ui-css/semantic.min.css'
-
   import NavBar from './components/Navbar';
   import Footer from './components/Footer';
 
