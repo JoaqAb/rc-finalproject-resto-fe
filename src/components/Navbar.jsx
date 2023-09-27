@@ -26,7 +26,7 @@ function NavBar() {
               <Nav.Link >
                   <Link to="/cart" className='nav-links'>Carrito</Link>
               </Nav.Link>
-            <NavDropdown title="Tu cuenta" id="basic-nav-dropdown" >
+            <NavDropdown title="Tu cuenta" id="basic-nav-dropdown">
                   <NavDropdown.Item > 
                         <Link to="/login" className='nav-letter'>Iniciar sesion</Link> 
                   </NavDropdown.Item>
