@@ -4,7 +4,7 @@ import Container from "react-bootstrap/Container";
 
 function ProductTable(props) {
   return (
-    <Container className="bg-light mt-5" style={{ paddingTop: "30em" }}>
+    <Container className="mt-5">
       <Table striped responsive hover bordered>
         <thead>
           <tr>
