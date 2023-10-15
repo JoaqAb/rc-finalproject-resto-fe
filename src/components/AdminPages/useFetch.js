@@ -13,6 +13,5 @@ export function useFetch(url) {
       .catch((error) => setError(error))
       .finally(() => setLoading(false));
   }, []);
-  console.log(data);
   return { data, loading, error };
 }

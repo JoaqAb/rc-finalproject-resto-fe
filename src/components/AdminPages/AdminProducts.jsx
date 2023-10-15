@@ -10,11 +10,12 @@ function AdminProducts() {
   return (
     <>
       <div className="h1 text-center">Administrador de Productos</div>
-      {error && <li>Error: {error}</li>}
-      {loading && <li>Loading...</li>}
       <ProductTable>
+        {error && <tr>Error: {error}</tr>}
+        {loading && <tr>Loading...</tr>}
         {data?.map((product) => (
           <ProductItem
+            key={product.id}
             name={product.name}
             price={product.price}
             description={product.description}
