@@ -3,7 +3,7 @@ import { ProductItem } from "../ProductComponents/ProductItem";
 import { ProductTable } from "../ProductComponents/ProductTable";
 import { useFetch } from "./useFetch";
 
-function AdminProducts() {
+function AdminProductsPage() {
   const { data, loading, error } = useFetch(
     "https://resto-rolling.onrender.com/api/products/list"
   );
@@ -27,4 +27,4 @@ function AdminProducts() {
   );
 }
 
-export { AdminProducts };
+export { AdminProductsPage };
