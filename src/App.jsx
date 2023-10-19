@@ -15,6 +15,7 @@ import HomeScreen from "./components/HomeScreen";
 import { Login } from "./components/Login";
 import { RegisterScreen } from "./components/RegisterScreen";
 import { AdminProductsPage } from "./components/AdminPages/AdminProductsPage";
+import { AdminProducts } from "./components/AdminPages/AdminProducts";
 
 function App() {
   return (
