@@ -31,7 +31,8 @@ function App() {
           <Route path="/" element={<HomeScreen />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<RegisterScreen />} />
-          <Route path="/admin/products" element={<AdminProductsPage />} />
+          <Route path="/admin/products" element={<AdminProducts />} />
+          {/*<Route path="/admin/products" element={<AdminProductsPage />} />*/}
         </Routes>
         <Footer />
       </BrowserRouter>
