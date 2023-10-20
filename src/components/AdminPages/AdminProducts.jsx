@@ -11,6 +11,12 @@ import {
   TrashFill,
   EyeFill,
   PencilFill,
+  Justify,
+  Tag,
+  EggFried,
+  TagFill,
+  CardImage,
+  EggFill,
 } from "react-bootstrap-icons";
 
 function AdminProducts() {
@@ -25,12 +31,27 @@ function AdminProducts() {
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
   const [description, setDescription] = useState("");
-  const [image, setImgae] = useState("");
-  const [operation, setOperation] = useState(1);
+  const [image, setImage] = useState("");
+  const [modalTitle, setModalTitle] = useState("");
   const [showModal, setShowModal] = useState(false);
 
   const handleClose = () => setShowModal(false);
-  const handleShow = () => setShowModal(true);
+  const handleShow = (op, id, name, price, description, image) => {
+    setName("");
+    setDescription("");
+    setPrice("");
+    setImage("");
+    if (op === 1) {
+      setModalTitle("Registrar Producto");
+    } else if (op === 2) {
+      setName(name);
+      setDescription(description);
+      setPrice(price);
+      setImage(image);
+      setModalTitle("Editar Producto");
+    }
+    setShowModal(true);
+  };
 
   return (
     <Container className="mt-5">
@@ -38,9 +59,13 @@ function AdminProducts() {
       <div className="row m-3">
         <div className="col-md-4 offset-md-4">
           <div className="d-grid mx-auto">
-            <Button variant="success" onClick={handleShow}>
+            <Button
+              variant="success"
+              onClick={() => {
+                handleShow(1);
+              }}
+            >
               <PlusCircleFill />
-              Añadir
             </Button>
           </div>
         </div>
@@ -68,14 +93,27 @@ function AdminProducts() {
               <td className="d-none d-md-table-cell">{product.image}</td>
               <td>
                 <div
-                  class="btn-group"
+                  className="btn-group"
                   role="group"
                   aria-label="Basic mixed styles example"
                 >
-                  <button type="button" class="btn btn-warning">
+                  <button
+                    type="button"
+                    className="btn btn-warning"
+                    onClick={() => {
+                      handleShow(
+                        2,
+                        product.id,
+                        product.name,
+                        product.price,
+                        product.description,
+                        product.image
+                      );
+                    }}
+                  >
                     <PencilFill className="text-light" />
                   </button>
-                  <button type="button" class="btn btn-danger">
+                  <button type="button" className="btn btn-danger">
                     <TrashFill />
                   </button>
                 </div>
@@ -84,18 +122,70 @@ function AdminProducts() {
           ))}
         </tbody>
       </Table>
-
       <Modal show={showModal} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
+          <Modal.Title>{modalTitle}</Modal.Title>
         </Modal.Header>
-        <Modal.Body>Woohoo, you are reading this text in a modal!</Modal.Body>
+        <Modal.Body>
+          <div className="input-group mb-3">
+            <span className="input-group-text">
+              <EggFill />
+            </span>
+            <input
+              type="text"
+              id="name"
+              className="form-control"
+              placeholder="Nombre"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+          </div>
+          <div className="input-group mb-3">
+            <span className="input-group-text">
+              <Justify />
+            </span>
+            <input
+              type="text"
+              id="description"
+              className="form-control"
+              placeholder="Descripción"
+              value={description}
+              onChange={(e) => setDescription(e.target.value)}
+            />
+          </div>
+          <div className="input-group mb-3">
+            <span className="input-group-text">
+              <Tag />
+            </span>
+            <input
+              type="text"
+              id="price"
+              className="form-control"
+              placeholder="Precio"
+              value={price}
+              onChange={(e) => setPrice(e.target.value)}
+            />
+          </div>
+          <div className="input-group mb-3">
+            <span className="input-group-text">
+              <CardImage />
+            </span>
+            <input
+              type="text"
+              id="image"
+              className="form-control"
+              placeholder="URL de la imagen"
+              value={image}
+              onChange={(e) => setImage(e.target.value)}
+            />
+          </div>
+        </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
-            Close
+            Cerrar
           </Button>
           <Button variant="primary" onClick={handleClose}>
-            Save Changes
+            Guardar
           </Button>
         </Modal.Footer>
       </Modal>
