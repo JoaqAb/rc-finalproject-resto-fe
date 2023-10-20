@@ -14,7 +14,6 @@ import Frequentquestion from "./components/Frequentquestion";
 import HomeScreen from "./components/HomeScreen";
 import { Login } from "./components/Login";
 import { RegisterScreen } from "./components/RegisterScreen";
-import { AdminProductsPage } from "./components/AdminPages/AdminProductsPage";
 import { AdminProducts } from "./components/AdminPages/AdminProducts";
 
 function App() {
@@ -33,7 +32,6 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<RegisterScreen />} />
           <Route path="/admin/products" element={<AdminProducts />} />
-          {/*<Route path="/admin/products" element={<AdminProductsPage />} />*/}
         </Routes>
         <Footer />
       </BrowserRouter>

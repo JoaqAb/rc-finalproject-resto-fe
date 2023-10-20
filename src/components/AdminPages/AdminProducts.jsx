@@ -13,7 +13,6 @@ import {
   PencilFill,
   Justify,
   Tag,
-  EggFried,
   TagFill,
   CardImage,
   EggFill,
@@ -184,7 +183,7 @@ function AdminProducts() {
           <Button variant="secondary" onClick={handleClose}>
             Cerrar
           </Button>
-          <Button variant="primary" onClick={handleClose}>
+          <Button variant="success" onClick={handleClose}>
             Guardar
           </Button>
         </Modal.Footer>
