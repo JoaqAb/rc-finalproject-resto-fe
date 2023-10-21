@@ -14,6 +14,10 @@ import {
   CardImage,
   EggFill,
 } from "react-bootstrap-icons";
+import axios from "axios";
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
+import { show_alert } from "./functions";
 
 function AdminProducts() {
   const { data, loading, error } = useFetch(
