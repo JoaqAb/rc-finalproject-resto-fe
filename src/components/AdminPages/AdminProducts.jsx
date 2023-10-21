@@ -7,13 +7,10 @@ import ButtonGroup from "react-bootstrap/ButtonGroup";
 import { useFetch } from "./useFetch";
 import { useState, useEffect } from "react";
 import {
-  PlusCircleFill,
   TrashFill,
-  EyeFill,
   PencilFill,
   Justify,
   Tag,
-  TagFill,
   CardImage,
   EggFill,
 } from "react-bootstrap-icons";
@@ -23,9 +20,6 @@ function AdminProducts() {
     "https://resto-rolling.onrender.com/api/products/list"
   );
 
-  {
-    /*variables formulario*/
-  }
   const [id, setId] = useState("");
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
@@ -51,76 +45,81 @@ function AdminProducts() {
     }
     setShowModal(true);
   };
+  const validarFormulario = () => {};
 
   return (
-    <Container className="mt-5">
-      <h1 className="text-center">Administrador de productos</h1>
-      <div className="row m-3">
-        <div className="col-md-4 offset-md-4">
-          <div className="d-grid mx-auto">
-            <Button
-              variant="success"
-              onClick={() => {
-                handleShow(1);
-              }}
-            >
-              <PlusCircleFill />
-            </Button>
+    <>
+      <Container className="mt-5">
+        <h1 className="text-center">Administrador de productos</h1>
+        <div className="row m-3">
+          <div className="col-md-4 offset-md-4">
+            <div className="d-grid mx-auto">
+              <Button
+                variant="success"
+                onClick={() => {
+                  handleShow(1);
+                }}
+              >
+                Nuevo Producto
+              </Button>
+            </div>
           </div>
         </div>
-      </div>
-      <Table striped responsive hover bordered>
-        <thead>
-          <tr>
-            {/*<th>#</th>*/}
-            <th>Nombre</th>
-            <th>Precio</th>
-            <th className="d-none d-sm-table-cell">Descripción</th>
-            <th className="d-none d-md-table-cell">Img URL</th>
-            <th>CRUD</th>
-          </tr>
-        </thead>
-        <tbody>
-          {error && <tr>Error: {error}</tr>}
-          {loading && <tr>Loading...</tr>}
-          {data?.map((product) => (
-            <tr key={product.id}>
-              {/*<td>{product.id}</td>*/}
-              <td>{product.name}</td>
-              <td>${product.price}</td>
-              <td className="d-none d-sm-table-cell">{product.description}</td>
-              <td className="d-none d-md-table-cell">{product.image}</td>
-              <td>
-                <div
-                  className="btn-group"
-                  role="group"
-                  aria-label="Basic mixed styles example"
-                >
-                  <button
-                    type="button"
-                    className="btn btn-warning"
-                    onClick={() => {
-                      handleShow(
-                        2,
-                        product.id,
-                        product.name,
-                        product.price,
-                        product.description,
-                        product.image
-                      );
-                    }}
-                  >
-                    <PencilFill className="text-light" />
-                  </button>
-                  <button type="button" className="btn btn-danger">
-                    <TrashFill />
-                  </button>
-                </div>
-              </td>
+        <Table striped responsive hover bordered>
+          <thead>
+            <tr>
+              {/*<th>#</th>*/}
+              <th>Nombre</th>
+              <th>Precio</th>
+              <th className="d-none d-sm-table-cell">Descripción</th>
+              <th className="d-none d-md-table-cell">Img URL</th>
+              <th>CRUD</th>
             </tr>
-          ))}
-        </tbody>
-      </Table>
+          </thead>
+          <tbody>
+            {error && <tr>Error: {error}</tr>}
+            {loading && <tr>Loading...</tr>}
+            {data?.map((product) => (
+              <tr key={product.id}>
+                {/*<td>{product.id}</td>*/}
+                <td>{product.name}</td>
+                <td>${product.price}</td>
+                <td className="d-none d-sm-table-cell">
+                  {product.description}
+                </td>
+                <td className="d-none d-md-table-cell">{product.image}</td>
+                <td>
+                  <div
+                    className="btn-group"
+                    role="group"
+                    aria-label="Basic mixed styles example"
+                  >
+                    <button
+                      type="button"
+                      className="btn btn-warning"
+                      onClick={() => {
+                        handleShow(
+                          2,
+                          product.id,
+                          product.name,
+                          product.price,
+                          product.description,
+                          product.image
+                        );
+                      }}
+                    >
+                      <PencilFill className="text-light" />
+                    </button>
+                    <button type="button" className="btn btn-danger">
+                      <TrashFill />
+                    </button>
+                  </div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </Table>
+      </Container>
       <Modal show={showModal} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>{modalTitle}</Modal.Title>
@@ -188,7 +187,7 @@ function AdminProducts() {
           </Button>
         </Modal.Footer>
       </Modal>
-    </Container>
+    </>
   );
 }
 
