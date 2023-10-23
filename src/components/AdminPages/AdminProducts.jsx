@@ -48,6 +48,9 @@ function AdminProducts() {
       setModalTitle("Editar Producto");
     }
     setShowModal(true);
+    window.setTimeout(function(){
+      document.getElementById("name").focus();
+    },500);
   };
   const validarFormulario = () => {};
 
