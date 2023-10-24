@@ -30,10 +30,12 @@ function AdminProducts() {
   const [description, setDescription] = useState("");
   const [image, setImage] = useState("");
   const [modalTitle, setModalTitle] = useState("");
+  const [operation, setOperation] = useState(0);
   const [showModal, setShowModal] = useState(false);
 
   const handleClose = () => setShowModal(false);
   const handleShow = (op, id, name, price, description, image) => {
+    setOperation(op);
     setName("");
     setDescription("");
     setPrice("");
@@ -41,6 +43,7 @@ function AdminProducts() {
     if (op === 1) {
       setModalTitle("Registrar Producto");
     } else if (op === 2) {
+      setId(id);
       setName(name);
       setDescription(description);
       setPrice(price);
@@ -52,7 +55,52 @@ function AdminProducts() {
       document.getElementById("name").focus();
     },500);
   };
-  const validarFormulario = () => {};
+  const validarFormulario = () => {
+    var parametros;
+    var metodo;
+    if(name.trim()===""){
+      show_alert("Escribe el nombre del producto", "warning");      
+    } else if(price.trim()===""){
+      show_alert("Escribe el precio del producto", "warning");      
+    } else if(description.trim()===""){
+      show_alert("Escribe la descripción del producto", "warning");      
+    } else if(image.trim()===""){
+      show_alert("Escribe la url de la imagen del producto", "warning");      
+    } else {
+      if (operation===1) {
+        metodo = "POST";
+      } else if (operation===2) {
+        metodo = "PUT";
+      }
+      parametros = {
+        name:name.trim(),
+        description:description.trim(),
+        price:price.trim(),
+        image:image.trim(),
+        available:true,
+      }
+      enviarSolicitud(metodo,parametros);
+    }
+  };
+  
+  const enviarSolicitud = async(metodo,parametros) => {
+    await axios({
+      method: metodo,
+      url: "https://resto-rolling.onrender.com/api/products/create",
+      data: parametros
+    }).then(function(respuesta){
+      var tipo = respuesta.data[0];
+      var msj = respuesta.data[1];
+      show_alert(msj,tipo);
+      if(tipo==="success"){
+        document.getElementById("btnCerrar").click();          
+      }
+    })
+    .catch(function(error){
+      show_alert("Error en la solicitud","error");
+      console.log(error);
+    });
+  }
 
   return (
     <>
@@ -87,7 +135,7 @@ function AdminProducts() {
             {error && <tr>Error: {error}</tr>}
             {loading && <tr>Loading...</tr>}
             {data?.map((product) => (
-              <tr key={product.id}>
+              <tr key={product._id}>
                 {/*<td>{product.id}</td>*/}
                 <td>{product.name}</td>
                 <td>${product.price}</td>
@@ -107,7 +155,7 @@ function AdminProducts() {
                       onClick={() => {
                         handleShow(
                           2,
-                          product.id,
+                          product._id,
                           product.name,
                           product.price,
                           product.description,
@@ -186,10 +234,10 @@ function AdminProducts() {
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
+          <Button variant="secondary" id="btnCerrar" onClick={handleClose}>
             Cerrar
           </Button>
-          <Button variant="success" onClick={handleClose}>
+          <Button variant="success" onClick={() => validarFormulario()}>
             Guardar
           </Button>
         </Modal.Footer>
