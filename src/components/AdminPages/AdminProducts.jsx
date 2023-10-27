@@ -78,6 +78,14 @@ function AdminProducts() {
         crearProducto(metodo,parametros);
       } else if (operation===2) {
         metodo = "PUT";
+        parametros = {
+          name:name.trim(),
+          description:description.trim(),
+          price:price.trim(),
+          image:image.trim(),
+          available:true,
+        }
+        editarProducto(metodo,parametros,id);
       }
     }
   };
@@ -90,6 +98,22 @@ function AdminProducts() {
     }).then(function(respuesta){
       console.log(respuesta);
       show_alert("Producto creado correctamente","success");
+      document.getElementById("btnCerrar").click();
+    })
+    .catch(function(error){
+      show_alert("Error en la solicitud","error");
+      console.log(error);
+    });
+  }
+
+  const editarProducto = async(metodo,parametros,id) => {
+    await axios({
+      method:metodo,
+      url:"https://resto-rolling.onrender.com/api/products/update/"+id,
+      data: parametros
+    }).then(function(respuesta){
+      console.log(respuesta);
+      show_alert("Producto editado correctamente","success");
       document.getElementById("btnCerrar").click();
     })
     .catch(function(error){
@@ -119,7 +143,7 @@ function AdminProducts() {
         <Table striped responsive hover bordered>
           <thead>
             <tr>
-              {/*<th>#</th>*/}
+              <th>#</th>
               <th>Nombre</th>
               <th>Precio</th>
               <th className="d-none d-sm-table-cell">Descripción</th>
@@ -132,7 +156,7 @@ function AdminProducts() {
             {loading && <tr>Loading...</tr>}
             {data?.map((product) => (
               <tr key={product._id}>
-                {/*<td>{product.id}</td>*/}
+                <td>{product.id}</td>
                 <td>{product.name}</td>
                 <td>${product.price}</td>
                 <td className="d-none d-sm-table-cell">
