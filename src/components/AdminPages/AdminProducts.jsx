@@ -3,7 +3,6 @@ import Table from "react-bootstrap/Table";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
-import ButtonGroup from "react-bootstrap/ButtonGroup";
 import { useFetch } from "./useFetch";
 import { useState, useEffect } from "react";
 import {
@@ -127,7 +126,7 @@ function AdminProducts() {
               <th>Nombre</th>
               <th>Precio</th>
               <th className="d-none d-sm-table-cell">Descripción</th>
-              <th className="d-none d-md-table-cell">Img URL</th>
+              {/* <th className="d-none d-md-table-cell">Img URL</th> */}
               <th>CRUD</th>
             </tr>
           </thead>
@@ -142,7 +141,7 @@ function AdminProducts() {
                 <td className="d-none d-sm-table-cell">
                   {product.description}
                 </td>
-                <td className="d-none d-md-table-cell">{product.image}</td>
+                {/* <td className="d-none d-md-table-cell">{product.image}</td> */}
                 <td>
                   <div
                     className="btn-group"
