@@ -68,32 +68,29 @@ function AdminProducts() {
     } else {
       if (operation===1) {
         metodo = "POST";
+        parametros = {
+          name:name.trim(),
+          description:description.trim(),
+          price:price.trim(),
+          image:image.trim(),
+          available:true,
+        }
+        crearProducto(metodo,parametros);
       } else if (operation===2) {
         metodo = "PUT";
       }
-      parametros = {
-        name:name.trim(),
-        description:description.trim(),
-        price:price.trim(),
-        image:image.trim(),
-        available:true,
-      }
-      enviarSolicitud(metodo,parametros);
     }
   };
   
-  const enviarSolicitud = async(metodo,parametros) => {
+  const crearProducto = async(metodo,parametros) => {
     await axios({
       method: metodo,
       url: "https://resto-rolling.onrender.com/api/products/create",
       data: parametros
     }).then(function(respuesta){
-      var tipo = respuesta.data[0];
-      var msj = respuesta.data[1];
-      show_alert(msj,tipo);
-      if(tipo==="success"){
-        document.getElementById("btnCerrar").click();          
-      }
+      console.log(respuesta);
+      show_alert("Producto creado correctamente","success");
+      document.getElementById("btnCerrar").click();
     })
     .catch(function(error){
       show_alert("Error en la solicitud","error");
