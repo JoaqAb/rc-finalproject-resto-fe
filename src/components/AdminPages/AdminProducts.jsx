@@ -122,6 +122,39 @@ function AdminProducts() {
     });
   }
 
+  const eliminarProducto = async(id,name) => {
+    const MySwal = withReactContent(Swal);
+    MySwal.fire({
+      title:"Seguro de eliminar el producto "+name+"?",
+      icon: "question",
+      text:"no se podrá deshacer la operación",
+      showCancelButton:true,
+      confirmButtonText:"Eliminar",
+      cancelButtonText:"Cancelar"
+    }).then((result) => {
+      if(result.isConfirmed){
+        solicitudEliminar(id);
+      } else {
+        show_alert("El producto no fue eliminado","info");
+      }
+    });
+  }
+
+  const solicitudEliminar = async(id) => {
+    await axios({
+      method:"DELETE",
+      url:"https://resto-rolling.onrender.com/api/products/delete/"+id,
+    }).then(function(respuesta){
+      console.log(respuesta);
+      show_alert("Producto eliminado correctamente","success");
+      //document.getElementById("btnCerrar").click();
+    })
+    .catch(function(error){
+      show_alert("Error en la solicitud","error");
+      console.log(error);
+    });
+  }
+
   return (
     <>
       <Container className="mt-5">
@@ -185,7 +218,7 @@ function AdminProducts() {
                     >
                       <PencilFill className="text-light" />
                     </button>
-                    <button type="button" className="btn btn-danger">
+                    <button type="button" className="btn btn-danger" onClick={()=>{eliminarProducto(product._id,product.name)}}>
                       <TrashFill />
                     </button>
                   </div>
