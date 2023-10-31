@@ -1,9 +1,7 @@
-import React from "react";
 import Table from "react-bootstrap/Table";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
-import { useFetch } from "./useFetch";
 import { useState, useEffect } from "react";
 import {
   TrashFill,
@@ -19,10 +17,7 @@ import withReactContent from "sweetalert2-react-content";
 import { show_alert } from "./functions";
 
 function AdminProducts() {
-  const { data, loading, error } = useFetch(
-    "https://resto-rolling.onrender.com/api/products/list"
-  );
-
+  const [products, setProducts] = useState([]);
   const [id, setId] = useState("");
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
@@ -31,6 +26,15 @@ function AdminProducts() {
   const [modalTitle, setModalTitle] = useState("");
   const [operation, setOperation] = useState(0);
   const [showModal, setShowModal] = useState(false);
+
+  useEffect(()=>{
+    getProducts();
+  },[]);
+  
+  const getProducts = async() => {
+    const respuesta = await axios.get("https://resto-rolling.onrender.com/api/products/list");
+    setProducts(respuesta.data.data);
+  }
 
   const handleClose = () => setShowModal(false);
   const handleShow = (op, id, name, price, description, image) => {
@@ -104,6 +108,7 @@ function AdminProducts() {
       show_alert("Error en la solicitud","error");
       console.log(error);
     });
+    getProducts();
   }
 
   const editarProducto = async(metodo,parametros,id) => {
@@ -120,6 +125,7 @@ function AdminProducts() {
       show_alert("Error en la solicitud","error");
       console.log(error);
     });
+    getProducts();
   }
 
   const eliminarProducto = async(id,name) => {
@@ -153,6 +159,7 @@ function AdminProducts() {
       show_alert("Error en la solicitud","error");
       console.log(error);
     });
+    getProducts();
   }
 
   return (
@@ -185,9 +192,7 @@ function AdminProducts() {
             </tr>
           </thead>
           <tbody>
-            {error && <tr>Error: {error}</tr>}
-            {loading && <tr>Loading...</tr>}
-            {data?.map((product) => (
+            {products?.map((product) => (
               <tr key={product._id}>
                 <td>{product.id}</td>
                 <td>{product.name}</td>
