@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
-import './navbar.css';
+
 import { Link } from 'react-router-dom';
 
 
@@ -14,7 +14,7 @@ function NavbarComponent({ mostrarInicioHandler, mostrarMenuHandler,numeroMesa, 
         <Navbar.Brand href="/inicio" style={{ color: "#ffdfd0" }}>
     
 
-          Restaurante
+          Apettito Bar
           </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

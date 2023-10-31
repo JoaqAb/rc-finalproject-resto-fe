@@ -1,6 +1,6 @@
 /* HomePage.css */
 .homepage {
-    background-image: url('Logo1.jpeg');
+    background-image: url(https://www.mobydecmuebles.com/wp-content/uploads/2019/09/restaurante-rojo.jpg);
     background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -10,8 +10,8 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: #d40303; /* Color de texto */
+  color: #e5dfdf; /* Color de texto */
   /* Agrega una superposición semi-transparente */
-  background-color: rgba(0, 0, 0, 0.3); /* Ajusta el último valor para controlar la opacidad */
+  background-color: rgba(247, 244, 244, 0.849); /* Ajusta el último valor para controlar la opacidad */
 }
   

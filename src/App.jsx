@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 import Formulario from './components/Contact';
 import MenuPage from './components/MenuPage';
 import CartPage from './components/CartPage';
+import Inicio from './components/Inicio';
 import CuentaScreen from "./components/CuentaScreen";
 import Error404 from './components/Error404';
 import Frequentquestion from './components/Frequentquestion';
@@ -29,7 +30,7 @@ function App() {
         handleNuevoPedido={handleNuevoPedido}
       />
       <Routes>
-      <Route path="/" element={<HomeScreen />} />
+  <Route path="/inicio" element={<Inicio />} />
   <Route path="/menu" element={<MenuPage addToCart={addToCart} />} />
   <Route path="/cart" element={<CartPage />} />
   <Route path="/contacto" element={<Formulario />} />
@@ -38,6 +39,7 @@ function App() {
   <Route path="/account" element={<CuentaScreen/> }/>
   <Route path= "/Error404" element = {<Error404/>}/> 
   <Route path= "/Frequentquestion" element = {<Frequentquestion/>}/> 
+  <Route path="/" element={<HomeScreen />} />
   <Route path="/login" element={<Login />} />
   <Route path="/register" element={<RegisterScreen />} />
   

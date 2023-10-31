@@ -7,7 +7,7 @@ function Inicio() {
     <div className="homepage">
       { }
       <h1>
-      <p>Descubre nuestros deliciosos platos y más.</p>
+      <p>Descubre nuestros deliciosos platos</p>
       </h1>
     </div>
   );
