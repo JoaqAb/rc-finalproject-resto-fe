@@ -33,7 +33,7 @@ function AdminProducts() {
   
   const getProducts = async() => {
     const respuesta = await axios.get("https://resto-rolling.onrender.com/api/products/list");
-    setProducts(respuesta.data.data);
+    setProducts(respuesta.data.data.reverse());
   }
 
   const handleClose = () => setShowModal(false);
