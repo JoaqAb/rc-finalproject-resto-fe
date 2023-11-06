@@ -11,7 +11,7 @@ import {
   CardImage,
   EggFill,
 } from "react-bootstrap-icons";
-import axios from "axios";
+import axios, { AxiosError } from "axios";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 import { show_alert } from "./functions";
@@ -105,7 +105,7 @@ function AdminProducts() {
       document.getElementById("btnCerrar").click();
     })
     .catch(function(error){
-      show_alert("Error en la solicitud","error");
+      show_alert(error.response.data.data,"error");
       console.log(error);
     });
     getProducts();
