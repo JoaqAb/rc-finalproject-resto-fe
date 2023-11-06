@@ -44,3 +44,72 @@
     text-decoration: none;
     background: #ec5853;
   }
+
+  @media (max-width: 910px){
+    .home-content{
+      background-color: rgba(204, 204, 204, 0.6);
+      padding: 20px;
+  }
+  
+  .home-content h1{
+      color: black;
+      font-size: 40px;
+      font-weight: 900;
+      text-shadow: -1px 2px 0px #666666;
+  }
+  .btn{
+    font-size: 15px;
+    padding: 7px 16px;
+  }
+}
+@media (max-width: 700px){
+  .home-content{
+    background-color: rgba(204, 204, 204, 0.6);
+    padding: 15px;
+}
+
+.home-content h1{
+    color: black;
+    font-size: 30px;
+    font-weight: 900;
+    text-shadow: -1px 2px 0px #666666;
+}
+.btn{
+  font-size: 15px;
+  padding: 7px 16px;
+}
+}
+@media (max-width: 520px){
+  .home-content{
+    background-color: rgba(204, 204, 204, 0.6);
+    padding: 10px;
+}
+
+.home-content h1{
+    color: black;
+    font-size: 20px;
+    font-weight: 900;
+    text-shadow: -1px 2px 0px #666666;
+}
+.btn{
+  font-size: 12px;
+  padding: 10px 10px;
+}
+}
+@media (max-width: 350px){
+  .home-content{
+    background-color: rgba(204, 204, 204, 0.6);
+    padding: 5px;
+}
+
+.home-content h1{
+    color: black;
+    font-size: 15px;
+    font-weight: 900;
+    text-shadow: -1px 2px 0px #666666;
+}
+.btn{
+  font-size: 12px;
+  padding: 10px 10px;
+}
+}

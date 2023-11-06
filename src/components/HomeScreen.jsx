@@ -1,5 +1,6 @@
 import React from 'react';
 import './HomeScreen.css'
+import { Link } from 'react-router-dom';
 
 function HomeScreen() {
   return (
@@ -7,7 +8,9 @@ function HomeScreen() {
       <div className='home-content'>
 
       <h1 className='Text-homepage'>Descubre nuestros deliciosos platos</h1>
-      <button className='btn'>Menu</button>
+      <Link to="/menu">
+      <button className='btn' >Menu</button>
+      </Link>
       </div>
     </div>
   );
