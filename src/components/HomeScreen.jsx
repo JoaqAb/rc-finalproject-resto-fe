@@ -1,18 +1,16 @@
-import React from 'react'
-import './homeScreen.css';
-import { Row,Col } from 'react-bootstrap';
+import React from 'react';
+import './HomeScreen.css'
 
-export const HomeScreen = () => {
+function HomeScreen() {
   return (
-    <div  >
-      <Row className='row-home'>
-        <Col className= "d-flex justify-content-center text-center align-items-center m-4 p-3">
-          <h1>Proximamente...</h1>
-        </Col>
-      </Row>
+    <div className="homepage">
+      <div className='home-content'>
 
+      <h1 className='Text-homepage'>Descubre nuestros deliciosos platos</h1>
+      <button className='btn'>Menu</button>
+      </div>
     </div>
-  )
+  );
 }
 
-export default HomeScreen
+export default HomeScreen;

@@ -11,17 +11,13 @@ function NavbarComponent({ mostrarInicioHandler, mostrarMenuHandler,numeroMesa, 
   return (
     <Navbar expand="lg" variant="dark" style={{ backgroundColor: "#ec5853" }}>
       <Container direction="horizontal" gap={6} className='contact-Nav' >
-        <Navbar.Brand href="/inicio" style={{ color: "#ffdfd0" }}>
-    
-
-          Apettito Bar
-          </Navbar.Brand>
+        <Navbar.Brand className='logo-Navbar'> 
+                  <Link to="/"><img className='logo-img' src={imgnavlogo} alt="Logo de appetito" /></Link>
+                  <Link to="/" className='logo-letter'><h5><strong>APPETITO</strong></h5></Link>
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Link href="/inicio" style={{ color: "#ffdfd0" }} onClick={mostrarInicioHandler}>
-              
-            </Nav.Link>
             
             <Nav.Link href="/menu" style={{ color: "#ffdfd0" }} onClick={mostrarMenuHandler}>
               Menú

@@ -16,6 +16,7 @@ function CartPage() {
   };
 
   return (
+    <div className="Cart-body">
     <div className="cart-container">
       <h2 className="cart-header">Carrito de Compras</h2>
       <ul className="cart-list">
@@ -30,13 +31,13 @@ function CartPage() {
               </button>
             </li>
           ))
-        ) : (
-          <p>El carrito de compras está vacío.</p>
-        )}
+          ) : (
+            <p>El carrito de compras está vacío.</p>
+            )}
       </ul>
       {cart.length > 0 && (
         <p className="cart-total">Total: ${calculateTotal()}</p>
-      )}
+        )}
       <button className="pay-button" onClick={() => handlePagar(setMostrarModal)}>
         Pagar
       </button>
@@ -52,6 +53,7 @@ function CartPage() {
         </div>
       )}
     </div>
+      </div>
   );
 }
 

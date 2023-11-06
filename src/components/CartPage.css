@@ -1,7 +1,15 @@
 /* CartPage.css */
 
+.Cart-body{
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
 .cart-container {
-    padding: 20px;
+   padding: 50px;
+    padding-left: 150px;
+    padding-right: 150px;
     background-color: rgb(213, 200, 200);
     border-radius: 10px;
     box-shadow: 0 2px 4px rgb(207, 4, 4);
