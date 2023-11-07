@@ -24,13 +24,9 @@ function NavbarComponent({ mostrarInicioHandler, mostrarMenuHandler,numeroMesa, 
             </Nav.Link>
             <Nav.Link href="/cart" style={{ color: "#ffdfd0" }}>Pedido({cartCount}) {/* Mostrar la cantidad de elementos en el carrito */}
             </Nav.Link>
-            <NavDropdown title={`Mesa ${numeroMesa} - ${estadoPedido}`} id="basic-nav-dropdown">
-                {estadoPedido === 'Pedido realizado' && (
-              <Nav.Link href="#" style={{ color: "#ffdfd0" }} onClick={handleNuevoPedido}>
-                  Nuevo Pedido
-              </Nav.Link>
-  )}
-</NavDropdown>
+            <Nav.Link style={{ color: "#ffdfd0" }}>
+            {`Mesa ${numeroMesa} - ${estadoPedido}`}
+            </Nav.Link>
 
 <NavDropdown title="Tu cuenta" id="basic-nav-dropdown">
                   <NavDropdown.Item > 

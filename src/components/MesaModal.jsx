@@ -42,4 +42,4 @@ function MesaModal({ show, onClose, onSubmit }) {
   );
 }
 
-export default MesaModal;
+export { MesaModal };

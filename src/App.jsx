@@ -1,10 +1,7 @@
-  import React from 'react'
-  import { Formik } from 'formik';
   import 'bootstrap/dist/css/bootstrap.min.css';
   import 'semantic-ui-css/semantic.min.css'
   import { BrowserRouter, Route, Routes } from 'react-router-dom';
   import HomeScreen from "./components/HomeScreen";
-  import NavBar from './components/Navbar';
   import Footer from './components/Footer';
   import NavbarComponent from './components/Navbar';
   import AboutUs from './components/AboutUs';
@@ -18,6 +15,7 @@
   import { Login } from "./components/Login";
   import { RegisterScreen } from "./components/RegisterScreen";
   import { useAppFuncionalidades } from './components/Funcionalidades';
+  import { MesaModal } from './components/MesaModal';
 
 
 
@@ -45,15 +43,9 @@
                 <Route path="/menu" element={<MenuPage addToCart={addToCart} />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<RegisterScreen />} />
-                {mostrarMesaInput && (
-        <MesaModal
-          show={mostrarMesaInput}
-          onClose={() => handleNuevoPedido()}
-          onSubmit={handleNumeroMesaSubmit}
-        />
-      )}
-              </Routes>
+            </Routes>
             <Footer/>
+            {mostrarMesaInput && ( <MesaModal show={mostrarMesaInput} onClose={() => handleNuevoPedido()} onSubmit={handleNumeroMesaSubmit} /> )}
         </BrowserRouter>
         </>
     )
