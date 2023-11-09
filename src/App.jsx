@@ -16,7 +16,7 @@
   import { RegisterScreen } from "./components/RegisterScreen";
   import { useAppFuncionalidades } from './components/Funcionalidades';
   import { MesaModal } from './components/MesaModal';
-
+  import { AdminProducts } from "./components/AdminPages/AdminProducts";
 
 
   function App() {
@@ -43,6 +43,7 @@
                 <Route path="/menu" element={<MenuPage addToCart={addToCart} />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<RegisterScreen />} />
+                <Route path="/admin/products" element={<AdminProducts />} />
             </Routes>
             <Footer/>
             {mostrarMesaInput && ( <MesaModal show={mostrarMesaInput} onClose={() => handleNuevoPedido()} onSubmit={handleNumeroMesaSubmit} /> )}
