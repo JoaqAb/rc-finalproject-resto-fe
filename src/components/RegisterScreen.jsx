@@ -7,6 +7,7 @@ export const RegisterScreen = () => {
   const [nombre, setNombre] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [passwordRep, setPasswordRep] = useState("");
   const [msjError, setMsjError] = useState("");
 
   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -24,14 +25,16 @@ export const RegisterScreen = () => {
   const validarFormulario = (e) => {
     e.preventDefault();
     //validaciones
-    if (nombre.trim() === "" || email === "" || password === "") {
-      return setMsjError("todos los campos deben ser obligatorios");
+    if (nombre.trim() === "" || email === "" || password === "" || passwordRep === "") {
+      return setMsjError("Todos los campos son obligatorios");
     } else if (nombre.length < 3) {
-      return setMsjError("el usuario debe tener más de 3 caracteres");
+      return setMsjError("El usuario debe tener más de 3 caracteres");
     } else if (!isValidEmail) {
-      return setMsjError("no es un email valido");
+      return setMsjError("No es un email valido");
     } else if (!validarContrasena(password)) {
-      return setMsjError("el usuario debe tener entre 6 caracteres, 2 números y 2 letras");
+      return setMsjError("La contraseña debe tener entre 6 caracteres, 2 números y 2 letras");
+    } else if (password !== passwordRep) {
+      return setMsjError("Las contraseñas no coinciden");
     }
 
     setMsjError("Usuario registrado correctamente");
@@ -70,6 +73,15 @@ export const RegisterScreen = () => {
                       type="password"
                       placeholder="Ingrese su contraseña"
                       onChange={(e) => setPassword(e.target.value)}
+                      />
+                  </Form.Group>
+
+                  <Form.Group className="mt-2" controlId="repetirContraseña">
+                    <Form.Label style={{color: "#ffdfd0",}}> <strong>Repetir Contraseña</strong></Form.Label>
+                    <Form.Control
+                      type="password"
+                      placeholder="Repita su contraseña"
+                      onChange={(e) => setPasswordRep(e.target.value)}
                       />
                   </Form.Group>
 
