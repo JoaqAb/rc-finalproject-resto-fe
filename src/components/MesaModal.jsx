@@ -3,24 +3,27 @@ import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 
 function MesaModal({ show, onClose, onSubmit }) {
-  const [numeroMesaInput, setNumeroMesaInput] = useState(''); // Estado para el número de mesa ingresado
+  const [numeroMesaInput, setNumeroMesaInput] = useState('');
 
-  // Función para manejar el cambio en el input del número de mesa
   const handleNumeroMesaChange = (event) => {
-    setNumeroMesaInput(event.target.value);
+    // Utiliza una expresión regular para permitir solo dígitos
+    const input = event.target.value.replace(/\D/g, '');
+    setNumeroMesaInput(input);
   };
 
-  // Función para manejar el envío del número de mesa
   const handleNumeroMesaSubmit = () => {
-    if (numeroMesaInput.trim() !== '') {
-      onSubmit(numeroMesaInput); // Llama a la función onSubmit con el número de mesa ingresado
+    const trimmedInput = numeroMesaInput.trim();
+    
+    // Valida que el valor consista solo en números antes de enviar
+    if (/^\d+$/.test(trimmedInput)) {
+      onSubmit(trimmedInput);
     }
   };
 
   return (
     <Modal show={show} onHide={onClose}>
       <Modal.Header closeButton>
-        <Modal.Title>Ingresa tu número de mesa</Modal.Title>
+        <Modal.Title>Ingresa tu Numero de Mesa</Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <input
@@ -28,6 +31,7 @@ function MesaModal({ show, onClose, onSubmit }) {
           placeholder="Número de mesa"
           value={numeroMesaInput}
           onChange={handleNumeroMesaChange}
+          pattern="\d*" // Solo permite dígitos
         />
       </Modal.Body>
       <Modal.Footer>
