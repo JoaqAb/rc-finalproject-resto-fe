@@ -18,17 +18,10 @@ function NavbarComponent({ mostrarInicioHandler, mostrarMenuHandler,numeroMesa, 
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            
-            <Nav.Link href="/menu" style={{ color: "#ffdfd0" }} onClick={mostrarMenuHandler}>
-              Menú
-            </Nav.Link>
-            <Nav.Link href="/cart" style={{ color: "#ffdfd0" }}>Pedido({cartCount}) {/* Mostrar la cantidad de elementos en el carrito */}
-            </Nav.Link>
-            <Nav.Link style={{ color: "#ffdfd0" }}>
-            {`Mesa ${numeroMesa} - ${estadoPedido}`}
-            </Nav.Link>
-
-<NavDropdown title="Tu cuenta" id="basic-nav-dropdown">
+            <Nav.Item><Nav.Link href="/menu" style={{ color: "#ffdfd0" }} onClick={mostrarMenuHandler}>Menú</Nav.Link></Nav.Item>
+            <Nav.Item><Nav.Link href="/cart" style={{ color: "#ffdfd0" }}>Pedido({cartCount}) {/* Mostrar la cantidad de elementos en el carrito */}</Nav.Link></Nav.Item>
+            <Nav.Item><Nav.Link style={{ color: "#ffdfd0" }}>{`Mesa ${numeroMesa} - ${estadoPedido}`}</Nav.Link></Nav.Item>
+            <NavDropdown title="Tu cuenta" id="basic-nav-dropdown">
                   <NavDropdown.Item > 
                         <Link to="/login" className='nav-letter'>Iniciar sesion</Link> 
                   </NavDropdown.Item>
