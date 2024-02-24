@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Form, Button, Row, Col } from "react-bootstrap";
 import "./Login.css";
 import { NavLink } from "react-router-dom";
+import axios from "axios";
 
 export const Login = () => {
   const [email, setEmail] = useState("");
@@ -20,8 +21,26 @@ export const Login = () => {
       return setMsjError("El email no es válido");
     }
 
+    var parametros = {
+      email:email,
+      password:password
+    }
+
+    iniciarSesion(parametros);
     setMsjError("Inició sesión correctamente");
   };
+
+  const iniciarSesion = async(parametros) => {
+    await axios({
+      method:"POST",
+      url:"https://resto-rolling.onrender.com/api/users/login",
+      data:parametros
+    }).then(function(respuesta){
+      console.log(respuesta.data.data.token);
+    }).catch(function(error){
+      console.log(error);
+    })
+  }
 
   return (
     <Row className="row-login">
