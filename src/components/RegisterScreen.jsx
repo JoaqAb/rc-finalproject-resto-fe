@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Form, Button, Row, Col } from "react-bootstrap";
 import "./RegisterScreen.css";
 import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 export const RegisterScreen = () => {
   const [nombre, setNombre] = useState("");
@@ -9,6 +11,7 @@ export const RegisterScreen = () => {
   const [password, setPassword] = useState("");
   const [passwordRep, setPasswordRep] = useState("");
   const [msjError, setMsjError] = useState("");
+  const navigate = useNavigate();
 
   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   const isValidEmail = emailRegex.test(email);
@@ -37,9 +40,29 @@ export const RegisterScreen = () => {
       return setMsjError("Las contraseñas no coinciden");
     }
 
-    setMsjError("Usuario registrado correctamente");
-    window.location.href = "http://localhost:5173/";
+    var parametros = {
+      name:nombre,
+      email:email,
+      password:password
+    }
+
+    registrarUsuario(parametros);    
   };
+
+  const registrarUsuario = async(parametros) => {
+    await axios({
+      method:"POST",
+      url:"https://resto-rolling.onrender.com/api/users/register",
+      data:parametros
+    }).then(function(respuesta){
+      console.log(respuesta.data.data.name);
+      setMsjError("Usuario creado correctamente. Redirigiendo al inicio de sesión");
+      //navigate("/login");
+    }).catch(function(error){
+      console.log(error);
+      return setMsjError("Ha ocurrido un error. Intenta nuevamente.");
+    })
+  }
 
   return (
     <Row className="row-register">

@@ -3,11 +3,13 @@ import { Form, Button, Row, Col } from "react-bootstrap";
 import "./Login.css";
 import { NavLink } from "react-router-dom";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 export const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [msjError, setMsjError] = useState("");
+  const navigate = useNavigate();
 
   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   const isValidEmail = emailRegex.test(email);
@@ -27,7 +29,6 @@ export const Login = () => {
     }
 
     iniciarSesion(parametros);
-    setMsjError("Inició sesión correctamente");
   };
 
   const iniciarSesion = async(parametros) => {
@@ -37,8 +38,12 @@ export const Login = () => {
       data:parametros
     }).then(function(respuesta){
       console.log(respuesta.data.data.token);
+      setMsjError("Inició sesión correctamente");
+      navigate("/menu");
     }).catch(function(error){
       console.log(error);
+      return setMsjError("Ha ocurrido un error. Intenta nuevamente.");
+
     })
   }
 
