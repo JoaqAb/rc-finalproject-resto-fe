@@ -4,7 +4,7 @@ import './navbar.css';
 import { Link } from 'react-router-dom';
 import imgnavlogo from '../images/logo-appetito.png';
 
-function NavbarComponent({ mostrarInicioHandler, mostrarMenuHandler,numeroMesa, cartCount,estadoPedido,handleNuevoPedido }) {
+function NavbarComponent({numeroMesa, cartCount,estadoPedido}) {
   console.log('numeroMesa:', numeroMesa);
   console.log('cartCount:', cartCount);
   console.log('estadoPedido:', estadoPedido);
@@ -18,17 +18,10 @@ function NavbarComponent({ mostrarInicioHandler, mostrarMenuHandler,numeroMesa, 
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            
-            <Nav.Link href="/menu" style={{ color: "#ffdfd0" }} onClick={mostrarMenuHandler}>
-              Menú
-            </Nav.Link>
-            <Nav.Link href="/cart" style={{ color: "#ffdfd0" }}>Pedido({cartCount}) {/* Mostrar la cantidad de elementos en el carrito */}
-            </Nav.Link>
-            <Nav.Link style={{ color: "#ffdfd0" }}>
-            {`Mesa ${numeroMesa} - ${estadoPedido}`}
-            </Nav.Link>
-
-<NavDropdown title="Tu cuenta" id="basic-nav-dropdown">
+            <Nav.Item><Link to="/menu" style={{ color: "#ffdfd0" }}>Menú</Link></Nav.Item>
+            <Nav.Item><Link to="/cart" style={{ color: "#ffdfd0" }}>Pedido({cartCount}) {/* Mostrar la cantidad de elementos en el carrito */}</Link></Nav.Item>
+            <Nav.Item><Link style={{ color: "#ffdfd0" }}>{`Mesa ${numeroMesa} - ${estadoPedido}`}</Link></Nav.Item>
+            <NavDropdown title="Tu cuenta" id="basic-nav-dropdown">
                   <NavDropdown.Item > 
                         <Link to="/login" className='nav-letter'>Iniciar sesion</Link> 
                   </NavDropdown.Item>

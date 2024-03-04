@@ -2,12 +2,16 @@ import React, { useState } from "react";
 import { Form, Button, Row, Col } from "react-bootstrap";
 import "./RegisterScreen.css";
 import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 export const RegisterScreen = () => {
   const [nombre, setNombre] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [passwordRep, setPasswordRep] = useState("");
   const [msjError, setMsjError] = useState("");
+  const navigate = useNavigate();
 
   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   const isValidEmail = emailRegex.test(email);
@@ -24,19 +28,41 @@ export const RegisterScreen = () => {
   const validarFormulario = (e) => {
     e.preventDefault();
     //validaciones
-    if (nombre.trim() === "" || email === "" || password === "") {
-      return setMsjError("todos los campos deben ser obligatorios");
+    if (nombre.trim() === "" || email === "" || password === "" || passwordRep === "") {
+      return setMsjError("Todos los campos son obligatorios");
     } else if (nombre.length < 3) {
-      return setMsjError("el usuario debe tener más de 3 caracteres");
+      return setMsjError("El usuario debe tener más de 3 caracteres");
     } else if (!isValidEmail) {
-      return setMsjError("no es un email valido");
+      return setMsjError("No es un email valido");
     } else if (!validarContrasena(password)) {
-      return setMsjError("el usuario debe tener entre 6 caracteres, 2 números y 2 letras");
+      return setMsjError("La contraseña debe tener entre 6 caracteres, 2 números y 2 letras");
+    } else if (password !== passwordRep) {
+      return setMsjError("Las contraseñas no coinciden");
     }
 
-    setMsjError("Usuario registrado correctamente");
-    window.location.href = "http://localhost:5173/";
+    var parametros = {
+      name:nombre,
+      email:email,
+      password:password
+    }
+
+    registrarUsuario(parametros);    
   };
+
+  const registrarUsuario = async(parametros) => {
+    await axios({
+      method:"POST",
+      url:"https://resto-rolling.onrender.com/api/users/register",
+      data:parametros
+    }).then(function(respuesta){
+      console.log(respuesta.data.data.name);
+      setMsjError("Usuario creado correctamente. Redirigiendo al inicio de sesión");
+      //navigate("/login");
+    }).catch(function(error){
+      console.log(error);
+      return setMsjError("Ha ocurrido un error. Intenta nuevamente.");
+    })
+  }
 
   return (
     <Row className="row-register">
@@ -70,6 +96,15 @@ export const RegisterScreen = () => {
                       type="password"
                       placeholder="Ingrese su contraseña"
                       onChange={(e) => setPassword(e.target.value)}
+                      />
+                  </Form.Group>
+
+                  <Form.Group className="mt-2" controlId="repetirContraseña">
+                    <Form.Label style={{color: "#ffdfd0",}}> <strong>Repetir Contraseña</strong></Form.Label>
+                    <Form.Control
+                      type="password"
+                      placeholder="Repita su contraseña"
+                      onChange={(e) => setPasswordRep(e.target.value)}
                       />
                   </Form.Group>
 
