@@ -26,9 +26,12 @@ function AdminProducts() {
   const [modalTitle, setModalTitle] = useState("");
   const [operation, setOperation] = useState(0);
   const [showModal, setShowModal] = useState(false);
+  const userRol = JSON.parse(localStorage.getItem('userData')).rol;
 
   useEffect(()=>{
-    getProducts();
+    if(userRol === "admin") {
+      getProducts();
+    }
   },[]);
   
   const getProducts = async() => {
