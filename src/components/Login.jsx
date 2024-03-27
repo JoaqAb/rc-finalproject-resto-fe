@@ -37,9 +37,15 @@ export const Login = () => {
       url:"https://resto-rolling.onrender.com/api/users/login",
       data:parametros
     }).then(function(respuesta){
-      console.log(respuesta.data.data.token);
+      console.log(respuesta.data.data);
+      localStorage.setItem('userData', JSON.stringify(respuesta.data.data));
       setMsjError("Inició sesión correctamente");
-      navigate("/menu");
+      if(respuesta.data.data.rol === "client") {
+        navigate("/menu");
+      }
+      if(respuesta.data.data.rol === "admin") {
+        navigate("/admin/products");
+      }
     }).catch(function(error){
       console.log(error);
       return setMsjError("Ha ocurrido un error. Intenta nuevamente.");
