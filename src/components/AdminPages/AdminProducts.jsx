@@ -99,14 +99,12 @@ function AdminProducts() {
       method: metodo,
       url: "https://resto-rolling.onrender.com/api/products/create",
       data: parametros
-    }).then(function(respuesta){
-      //console.log(respuesta);
+    }).then(function(){
       show_alert("Producto creado correctamente","success");
       document.getElementById("btnCerrar").click();
     })
     .catch(function(error){
       show_alert(error.response.data.data,"error");
-      //console.log(error);
     });
     getProducts();
   }
@@ -150,13 +148,11 @@ function AdminProducts() {
     await axios({
       method:"DELETE",
       url:"https://resto-rolling.onrender.com/api/products/delete/"+id,
-    }).then(function(respuesta){
-      //console.log(respuesta);
+    }).then(function(){
       show_alert("Producto eliminado correctamente","success");
     })
     .catch(function(error){
       show_alert(error.response.data.data,"error");
-      //console.log(error);
     });
     getProducts();
   }

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './CartPage.css';
 import { useAppFuncionalidades } from './Funcionalidades';
+import { Link } from 'react-router-dom';
 
 function CartPage() {
   const {
@@ -36,12 +37,22 @@ function CartPage() {
             )}
       </ul>
       {cart.length > 0 && (
+      <>
         <p className="cart-total">Total: ${calculateTotal()}</p>
-        )}
-      <button className="pay-button" onClick={() => handlePagar(setMostrarModal)}>
-        Pagar
-      </button>
-
+        <button className="pay-button" onClick={() => handlePagar(setMostrarModal)}>
+          Pagar
+        </button>
+      </>
+      )}
+      {cart.length === 0 && (
+      <>
+      <Link to="/menu">
+        <button className="pay-button" onClick={() => handlePagar(setMostrarModal)}>
+          Agregar Productos
+        </button>
+        </Link>
+      </>
+      )}
       {/* Elemento condicional para mostrar el modal */}
       {mostrarModal && (
         <div className="modal">
