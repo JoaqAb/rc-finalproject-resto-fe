@@ -14,8 +14,8 @@ function MesaModal({ show, onClose, onSubmit }) {
   const handleNumeroMesaSubmit = () => {
     const trimmedInput = numeroMesaInput.trim();
     
-    // Valida que el valor consista solo en números antes de enviar
-    if (/^\d+$/.test(trimmedInput)) {
+    // Valida que el valor consista solo en números y tenga máximo 2 dígitos antes de enviar
+    if (/^\d{1,2}$/.test(trimmedInput)) {
       onSubmit(trimmedInput);
     }
   };
@@ -32,6 +32,7 @@ function MesaModal({ show, onClose, onSubmit }) {
           value={numeroMesaInput}
           onChange={handleNumeroMesaChange}
           pattern="\d*" // Solo permite dígitos
+          maxLength={2} // Limita la longitud máxima a 2
         />
       </Modal.Body>
       <Modal.Footer>
