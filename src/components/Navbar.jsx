@@ -3,6 +3,7 @@ import {Container,Nav,Navbar,NavDropdown}from 'react-bootstrap';
 import './navbar.css';
 import { Link } from 'react-router-dom';
 import imgnavlogo from '../images/logo-appetito.png';
+import { useState,useEffect } from 'react';
 
 function NavbarComponent({
   mostrarInicioHandler,
@@ -15,6 +16,15 @@ function NavbarComponent({
   console.log("numeroMesa:", numeroMesa);
   console.log("cartCount:", cartCount);
   console.log("estadoPedido:", estadoPedido);
+  const [userRol, setUserRol] = useState(null);
+
+  useEffect(()=>{
+    const storedUserRol = JSON.parse(localStorage.getItem("userRol"));
+    if (storedUserRol) {
+      setUserRol(storedUserRol);
+    }
+  },[]);
+  
   return (
     <Navbar expand="lg" variant="dark" style={{ backgroundColor: "#ec5853" }}>
       <Container direction="horizontal" gap={6} className="contact-Nav">
@@ -31,6 +41,14 @@ function NavbarComponent({
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
+          {userRol === "admin" && 
+                    <Nav.Link
+                    href="/admin/products"
+                    style={{ color: "#ffdfd0" }}
+                  >
+                    Administrar Productos
+                  </Nav.Link>
+          }
             <Nav.Link
               href="/menu"
               style={{ color: "#ffdfd0" }}
@@ -45,7 +63,6 @@ function NavbarComponent({
             <Nav.Link style={{ color: "#ffdfd0" }}>
               {`Mesa ${numeroMesa} - ${estadoPedido}`}
             </Nav.Link>
-
             <NavDropdown title="Tu cuenta" id="basic-nav-dropdown">
               <NavDropdown.Item>
                 <Link to="/login" className="nav-letter">

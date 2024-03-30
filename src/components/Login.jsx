@@ -39,6 +39,7 @@ export const Login = () => {
     }).then(function(respuesta){
       console.log(respuesta.data.data);
       localStorage.setItem('userData', JSON.stringify(respuesta.data.data));
+      localStorage.setItem('userRol', JSON.stringify(respuesta.data.data.rol));
       setMsjError("Inició sesión correctamente");
       if(respuesta.data.data.rol === "client") {
         navigate("/menu");
