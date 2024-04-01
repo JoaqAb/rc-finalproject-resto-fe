@@ -65,6 +65,10 @@
   .container-aboutus {
     height: auto;
   }
+  .carousel {
+    margin-top: 10px;
+  }
+
   .tittle-about {
     font-size: large;
     padding-bottom: 7px;
