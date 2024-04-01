@@ -1,7 +1,7 @@
 /* CartPage.css */
 
 .Cart-body {
-  height: auto; /* Ajustado para hacerlo más responsive */
+  min-height: 80vh; /* Ajustado para hacerlo más responsive */
   display: flex;
   align-items: center;
   text-align: center;
