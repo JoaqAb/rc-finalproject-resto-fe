@@ -5,7 +5,14 @@ import imglucas from "../images/lucas-albarado.png";
 import imgjoaquin from "../images/joaquin.jpg";
 import imgfederico from "../images/federico-khouri.png";
 import imgluca from "../images/luca-campisi.png";
-import imgvalentina from "../images/logo-appetito.png";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaTwitter,
+  FaLinkedin,
+  FaGithubSquare,
+} from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function AboutUs() {
   return (
@@ -40,15 +47,21 @@ function AboutUs() {
                   </Card.Description>
                 </Card.Content>
                 <Card.Content extra>
-                  <a>
-                    <Icon name="facebook f" />
-                  </a>
-                  <a>
-                    <Icon name="twitter" />
-                  </a>
-                  <a>
-                    <Icon name="instagram" />
-                  </a>
+                  <Link to="/Error404">
+                    <FaFacebook className="m-1" />
+                  </Link>
+                  <Link to="/Error404">
+                    <FaInstagram className="m-1" />
+                  </Link>
+                  <Link to="/Error404">
+                    <FaTwitter className="m-1" />
+                  </Link>
+                  <Link to="/Error404">
+                    <FaLinkedin className="m-1" />
+                  </Link>
+                  <Link to="https://github.com/LucasAlbarado">
+                    <FaGithubSquare className="m-1" />
+                  </Link>
                 </Card.Content>
               </Card>
             </Carousel.Item>
@@ -65,15 +78,21 @@ function AboutUs() {
                   </Card.Description>
                 </Card.Content>
                 <Card.Content extra>
-                  <a>
-                    <Icon name="facebook f" />
-                  </a>
-                  <a>
-                    <Icon name="twitter" />
-                  </a>
-                  <a>
-                    <Icon name="instagram" />
-                  </a>
+                  <Link to="/Error404">
+                    <FaFacebook className="m-1" />
+                  </Link>
+                  <Link to="/Error404">
+                    <FaInstagram className="m-1" />
+                  </Link>
+                  <Link to="/Error404">
+                    <FaTwitter className="m-1" />
+                  </Link>
+                  <Link to="/Error404">
+                    <FaLinkedin className="m-1" />
+                  </Link>
+                  <Link to="https://github.com/JoaqAb">
+                    <FaGithubSquare className="m-1" />
+                  </Link>
                 </Card.Content>
               </Card>
             </Carousel.Item>
@@ -90,15 +109,21 @@ function AboutUs() {
                   </Card.Description>
                 </Card.Content>
                 <Card.Content extra>
-                  <a>
-                    <Icon name="facebook f" />
-                  </a>
-                  <a>
-                    <Icon name="twitter" />
-                  </a>
-                  <a>
-                    <Icon name="instagram" />
-                  </a>
+                  <Link to="/Error404">
+                    <FaFacebook className="m-1" />
+                  </Link>
+                  <Link to="/Error404">
+                    <FaInstagram className="m-1" />
+                  </Link>
+                  <Link to="/Error404">
+                    <FaTwitter className="m-1" />
+                  </Link>
+                  <Link to="/Error404">
+                    <FaLinkedin className="m-1" />
+                  </Link>
+                  <Link to="https://github.com/ramirokhouri">
+                    <FaGithubSquare className="m-1" />
+                  </Link>
                 </Card.Content>
               </Card>
             </Carousel.Item>
@@ -115,15 +140,21 @@ function AboutUs() {
                   </Card.Description>
                 </Card.Content>
                 <Card.Content extra>
-                  <a>
-                    <Icon name="facebook f" />
-                  </a>
-                  <a>
-                    <Icon name="twitter" />
-                  </a>
-                  <a>
-                    <Icon name="instagram" />
-                  </a>
+                  <Link to="/Error404">
+                    <FaFacebook className="m-1" />
+                  </Link>
+                  <Link to="/Error404">
+                    <FaInstagram className="m-1" />
+                  </Link>
+                  <Link to="/Error404">
+                    <FaTwitter className="m-1" />
+                  </Link>
+                  <Link to="/Error404">
+                    <FaLinkedin className="m-1" />
+                  </Link>
+                  <Link to="https://github.com/LucaCampisi27">
+                    <FaGithubSquare className="m-1" />
+                  </Link>
                 </Card.Content>
               </Card>
             </Carousel.Item>
