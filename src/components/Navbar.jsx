@@ -48,25 +48,34 @@ function NavbarComponent({
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
             {userRol === "admin" && (
-              <Nav.Link href="/admin/products" style={{ color: "#ffdfd0" }}>
-                Administrar Productos
+              <Nav.Link>
+              <Nav.Item>
+                <Link to="/admin/products" style={{ color: "#ffdfd0", textDecoration: "none" }}>Administrar Productos</Link>
+              </Nav.Item>
               </Nav.Link>
+
             )}
-            <Nav.Link
-              href="/menu"
-              style={{ color: "#ffdfd0" }}
+            <Nav.Link >
+            <Nav.Item
               onClick={mostrarMenuHandler}
             >
-              Menú
+              <Link to="/menu" style={{ color: "#ffdfd0", textDecoration: "none"  }}>Menú</Link>
+            </Nav.Item>
             </Nav.Link>
-            <Nav.Link href="/cart" style={{ color: "#ffdfd0" }}>
-              Pedido({cartCount}){" "}
-              {/* Mostrar la cantidad de elementos en el carrito */}
+
+            <Nav.Link>
+            <Nav.Item >
+              <Link to="/cart" style={{ color: "#ffdfd0", textDecoration: "none"  }}>Pedido({cartCount}){" "}</Link>
+            </Nav.Item>
             </Nav.Link>
-            <Nav.Link style={{ color: "#ffdfd0" }}>
+
+            <Nav.Link>
+            <Nav.Item style={{ color: "#ffdfd0", textDecoration: "none"  }}>
               {`Mesa ${numeroMesa} - ${estadoPedido}`}
+            </Nav.Item>
             </Nav.Link>
-            <NavDropdown title="Tu cuenta" id="basic-nav-dropdown">
+
+            <NavDropdown title="Tu cuenta" id="basic-nav-dropdown" style={{ color: "#ffdfd0", textDecoration: "none"  }}>
               {userRol == null &&
               <>
                 <NavDropdown.Item>
