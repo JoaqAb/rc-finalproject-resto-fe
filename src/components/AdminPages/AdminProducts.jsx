@@ -157,6 +157,7 @@ function AdminProducts() {
     getProducts();
   }
 
+
   return (
     <>
       <Container className="mt-5">
@@ -244,6 +245,7 @@ function AdminProducts() {
               placeholder="Nombre"
               value={name}
               onChange={(e) => setName(e.target.value)}
+              maxLength={20}
             />
           </div>
           <div className="input-group mb-3">
@@ -257,6 +259,7 @@ function AdminProducts() {
               placeholder="Descripción"
               value={description}
               onChange={(e) => setDescription(e.target.value)}
+              maxLength={50}
             />
           </div>
           <div className="input-group mb-3">
@@ -270,6 +273,8 @@ function AdminProducts() {
               placeholder="Precio"
               value={price}
               onChange={(e) => setPrice(e.target.value)}
+              pattern="\d+(\.\d{1,2})?"
+              maxLength={7}
             />
           </div>
           <div className="input-group mb-3">
@@ -283,6 +288,7 @@ function AdminProducts() {
               placeholder="URL de la imagen"
               value={image}
               onChange={(e) => setImage(e.target.value)}
+              maxLength={250}
             />
           </div>
         </Modal.Body>

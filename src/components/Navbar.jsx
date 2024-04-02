@@ -67,17 +67,20 @@ function NavbarComponent({
               {`Mesa ${numeroMesa} - ${estadoPedido}`}
             </Nav.Link>
             <NavDropdown title="Tu cuenta" id="basic-nav-dropdown">
-              <NavDropdown.Item>
-                <Link to="/login" className="nav-letter">
-                  Iniciar sesion
-                </Link>
-              </NavDropdown.Item>
-              <NavDropdown.Item>
-                <Link to="/register" className="nav-letter">
-                  Registrarse
-                </Link>
-              </NavDropdown.Item>
-
+              {userRol == null &&
+              <>
+                <NavDropdown.Item>
+                  <Link to="/login" className="nav-letter">
+                    Iniciar sesion
+                  </Link>
+                </NavDropdown.Item>
+                <NavDropdown.Item>
+                  <Link to="/register" className="nav-letter">
+                    Registrarse
+                  </Link>
+                </NavDropdown.Item>
+              </>
+              }
               {userRol != null &&
                 <>
                   <NavDropdown.Item>
