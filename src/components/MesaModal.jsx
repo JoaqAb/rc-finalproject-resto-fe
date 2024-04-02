@@ -23,7 +23,7 @@ function MesaModal({ show, onClose, onSubmit }) {
   return (
     <Modal show={show} onHide={onClose}>
       <Modal.Header closeButton>
-        <Modal.Title>Ingresa tu Numero de Mesa</Modal.Title>
+        <Modal.Title>Ingresa tu Número de Mesa</Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <input

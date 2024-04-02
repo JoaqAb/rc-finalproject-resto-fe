@@ -13,7 +13,7 @@ function MenuPage({ addToCart }) {
       .then((response) => response.json())
       .then((data) => {
         if (Array.isArray(data.data)) {
-          setMenuItems(data.data);
+          setMenuItems(data.data.reverse());
         } else {
           console.error('La respuesta de la API no es un array:', data);
         }

@@ -25,6 +25,12 @@ function NavbarComponent({
     }
   }, []);
 
+  const handleLogout = () => {
+    localStorage.clear();
+    setUserRol(null); 
+    window.location.reload();
+  };
+
   return (
     <Navbar expand="lg" variant="dark" style={{ backgroundColor: "#ec5853" }}>
       <Container direction="horizontal" gap={6} className="contact-Nav">
@@ -61,21 +67,34 @@ function NavbarComponent({
               {`Mesa ${numeroMesa} - ${estadoPedido}`}
             </Nav.Link>
             <NavDropdown title="Tu cuenta" id="basic-nav-dropdown">
-              <NavDropdown.Item>
-                <Link to="/login" className="nav-letter">
-                  Iniciar sesion
-                </Link>
-              </NavDropdown.Item>
-              <NavDropdown.Item>
-                <Link to="/register" className="nav-letter">
-                  Registrarse
-                </Link>
-              </NavDropdown.Item>
-              <NavDropdown.Item>
-                <Link to="/Error404" className="nav-letter">
-                  Cambiar mis datos
-                </Link>
-              </NavDropdown.Item>
+              {userRol == null &&
+              <>
+                <NavDropdown.Item>
+                  <Link to="/login" className="nav-letter">
+                    Iniciar sesion
+                  </Link>
+                </NavDropdown.Item>
+                <NavDropdown.Item>
+                  <Link to="/register" className="nav-letter">
+                    Registrarse
+                  </Link>
+                </NavDropdown.Item>
+              </>
+              }
+              {userRol != null &&
+                <>
+                  <NavDropdown.Item>
+                    <Link to="/Error404" className="nav-letter">
+                        Cambiar mis datos
+                    </Link>
+                  </NavDropdown.Item>
+                  <NavDropdown.Item>
+                    <Link to="/" className="nav-letter">
+                      <button onClick={handleLogout}className="custom-button">Cerrar Sesion</button>
+                    </Link>
+                  </NavDropdown.Item>
+                </>
+              }
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
