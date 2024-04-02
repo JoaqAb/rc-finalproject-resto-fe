@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './CartPage.css';
 import { useAppFuncionalidades } from './Funcionalidades';
 import { Link } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 function CartPage() {
   const {
@@ -15,6 +16,8 @@ function CartPage() {
   const calculateTotal = () => {
     return cart.reduce((total, item) => total + parseFloat(item.precio), 0);
   };
+
+  const navigate = useNavigate();
 
   return (
     <div className="Cart-body">
@@ -39,7 +42,8 @@ function CartPage() {
       {cart.length > 0 && (
       <>
         <p className="cart-total">Total: ${calculateTotal()}</p>
-        <button className="pay-button" onClick={() => handlePagar(setMostrarModal)}>
+        <Link to="/Error404"></Link>
+        <button className="pay-button" onClick={() => navigate("/Error404")}>
           Pagar
         </button>
       </>
@@ -47,7 +51,7 @@ function CartPage() {
       {cart.length === 0 && (
       <>
       <Link to="/menu">
-        <button className="pay-button" onClick={() => handlePagar(setMostrarModal)}>
+        <button className="pay-button">
           Agregar Productos
         </button>
         </Link>
