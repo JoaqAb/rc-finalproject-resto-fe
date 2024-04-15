@@ -15,7 +15,6 @@ export const RegisterScreen = () => {
 
   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   const isValidEmail = emailRegex.test(email);
-  console.log(nombre);
 
   const validarContrasena = (contrasena) => {
     //Expresiones regulares para validar la contraseña
@@ -55,11 +54,9 @@ export const RegisterScreen = () => {
       url:"https://resto-rolling.onrender.com/api/users/register",
       data:parametros
     }).then(function(respuesta){
-      console.log(respuesta.data.data.name);
       setMsjError("Usuario creado correctamente. Redirigiendo al inicio de sesión");
-      //navigate("/login");
+      navigate("/login");
     }).catch(function(error){
-      console.log(error);
       return setMsjError("Ha ocurrido un error. Intenta nuevamente.");
     })
   }
