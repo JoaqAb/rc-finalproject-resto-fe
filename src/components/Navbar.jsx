@@ -13,9 +13,6 @@ function NavbarComponent({
   estadoPedido,
   handleNuevoPedido,
 }) {
-  console.log("numeroMesa:", numeroMesa);
-  console.log("cartCount:", cartCount);
-  console.log("estadoPedido:", estadoPedido);
   const [userRol, setUserRol] = useState(null);
 
   useEffect(() => {
