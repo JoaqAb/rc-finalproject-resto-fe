@@ -25,7 +25,6 @@ function MenuPage({ addToCart }) {
 
   // Función para agregar un producto al carrito
   const handleAddToCart = (item) => {
-    console.log('Item agregado al carrito:', item); // Agrega el console.log aquí
     addToCart(item);
   };
 
