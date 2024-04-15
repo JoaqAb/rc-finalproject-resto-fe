@@ -137,6 +137,7 @@ function Formulario() {
                     as='textarea'
                     name='message'
                     rows={5}
+                    maxLength={144}
                     className={`form-control ${
                       errors.message && touched.message ? 'is-invalid' : ''
                     }`}
