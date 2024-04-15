@@ -52,10 +52,8 @@ function Formulario() {
     // Si todos los campos están completos, procede a enviar el formulario
     emailjs.sendForm('service_oryn2cp', 'template_y5sxiri', e.target, 'i5hfe9nste3bmiAHY')
       .then((result) => {
-        console.log(result.text);
       })
       .catch((error) => {
-        console.log(error.text);
       });
   };
 
@@ -63,7 +61,6 @@ function Formulario() {
 
   const handleSubmit = (values) => {
     // Aquí va la acción de envío de datos
-    console.log(values);
   };
 
  
